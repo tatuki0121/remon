@@ -5,12 +5,12 @@
 <p>会員の方は登録時に入力されたE-mailとパスワードでログインしてください。</p>
 <form action="top.php" method="post">
     メールアドレス　<input type="text" name="mail"><br>
-    パスワード　<input type="password" name="password"><br>
+    パスワード　<input type="password" name="pass"><br>
     <input type="submit" value="ログイン">
     <?php
     if(!isset($_SESSION['user'])){
     echo 'メールアドレスまたはパスワードが違います。';
-    }else if (empty($mail) || empty($password)) {
+    }else if (empty($mail) || empty($pass)) {
         echo "メールアドレスとパスワードは必須項目です。";
     }
     ?>
