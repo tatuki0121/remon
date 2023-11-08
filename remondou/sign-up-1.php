@@ -5,7 +5,7 @@
 if(isset($_POST['send'])){
     // DB問合せ
     $pdo = new PDO($connect,USER,PASS);
-    $sql = $pdo->prepare("select * from user where mail=? pass=? ");
+    $sql = $pdo->prepare("select * from user where mail=? or pass=? ");
     $sql->execute([$_POST['mail'],$_POST['pass']]);
     if(empty($sql->fetchAll())){
         // 存在しない場合、セッションに登録して確認画面へ遷移 header(location)
@@ -16,6 +16,7 @@ if(isset($_POST['send'])){
         exit();
     }else{
         // 存在してる場合→エラーメッセージ　画面はこのまま     ]
+        echo 'メールアドレスかパスワードが重複しています。';
     }
 }
     echo '新規ユーザー登録';
