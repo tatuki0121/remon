@@ -5,12 +5,18 @@
 if(isset($_POST['send'])){
     // DB問合せ
     $pdo = new PDO($connect,USER,PASS);
-
-    if(){
-        
+    $sql = $pdo->prepare("select * from user where mail=? pass=? ");
+    $sql->execute([$_POST['mail'],$_POST['pass']]);
+    if(empty($sql->fetchAll())){
+        // 存在しない場合、セッションに登録して確認画面へ遷移 header(location)
+        $_SESSION['user']=[
+            'mail' => $_POST['mail'],'pass' => $_POST['pass']
+        ];
+        header('Location: https://');
+        exit();
+    }else{
+        // 存在してる場合→エラーメッセージ　画面はこのまま     ]
     }
-    // 存在してる場合→エラーメッセージ　画面はこのまま
-    // 存在しない場合、セッションに登録して確認画面へ遷移 header(location)
 }
     echo '新規ユーザー登録';
     echo '<form action="sign-up-1.php" method="post">';
