@@ -1,0 +1,28 @@
+h2 {
+  text-align: center; /* テキストを中央に配置 */
+  margin-top: 40px; /* 上部に20pxのマージンを追加して余白を作成 */
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  padding: 0; /* <ul> 要素の内部余白をリセット */
+  list-style: none; /* リストのデフォルトスタイルを無効にする */
+}
+
+ul li {
+  margin: 0 10px; /* 画像の間に10pxの左右の余白を追加 */
+}
+.slider {
+  width: 50%;
+  height: 500px;
+  object-fit: cover;
+}
+.bx-wrapper {
+  width: 1000px;
+  height: 300px;
+  margin: 0 auto; /* 左右のマージンを自動で均等にすることで中央に配置 */
+}
+p {
+  text-align: center; /* テキストを中央に配置 */
+}
