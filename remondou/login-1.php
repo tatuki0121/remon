@@ -1,8 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
 <?php require 'header.php'; ?>
-<?php require 'nav.php'; ?>
-
     <?php
         if(isset($_POST['but'])){
             unset($_SESSION['user']);
