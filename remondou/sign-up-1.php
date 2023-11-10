@@ -5,12 +5,10 @@ $emasagge='';
 if(isset($_POST['send'])){
     // DB問合せ
     $pdo = new PDO($connect,USER,PASS);
-    $sql1 = $pdo->prepare("select * from user where mail=? and pass=?");
     $sql2 = $pdo->prepare("select * from user where mail=?");
-    $sql1->execute([$_POST['mail'],$_POST['pass']]);
     $sql2->execute([$_POST['mail']]);
     $data2 = $sql2->fetchAll();
-    if((empty($sql1->fetchAll()) && empty($data2)) && ($_POST['mail'] != '' && strlen($_POST['pass']) > 5)){
+    if(empty($data2) && ($_POST['mail'] != '' && strlen($_POST['pass']) > 5)){
         // 存在しない場合、セッションに登録して確認画面へ遷移 header(location)
         $_SESSION['user']=[
             'mail' => $_POST['mail'],'pass' => $_POST['pass']
