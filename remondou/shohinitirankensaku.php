@@ -35,6 +35,7 @@
     <input type="text" name="keyword">
     <input type="submit" value="🔍">
     <select>
+        <option value="度数">度数</option>
         <option value="3">3%</option>
         <option value="5">5%</option>
         <option value="7">7%</option>
