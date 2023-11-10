@@ -4,64 +4,43 @@
 <?php
     echo '<table>';
     $pdo = new PDO($connect, USER, PASS);
-
     if(isset($_POST['keyword'])){
-        $keyword = $_POST['keyword'];
-        $degree = isset($_POST['degree']) ? $_POST['degree'] : '';  // プルダウンメニューの度数
-
-        if (!empty($degree)) {
-            $sql = $pdo->prepare('SELECT * FROM shohin WHERE name LIKE ? AND degree = ?');
-            $sql->execute(['%'.$keyword.'%', $degree]);
-        } else {
+        if(!empty($_POST['keyword']) && !empty($_POST['selected_alcohol'])){
+            $sql = $pdo->prepare('SELECT * FROM shohin WHERE name LIKE ? AND alcohol = ?');
+            $sql->execute(['%'.$_POST['keyword'].'%', $_POST['selected_alcohol']]);
+        }else if(!empty($_POST['keyword']) && empty($_POST['selected_alcohol'])){
             $sql = $pdo->prepare('SELECT * FROM shohin WHERE name LIKE ?');
-            $sql->execute(['%'.$keyword.'%']);
+            $sql->execute(['%'.$_POST['keyword'].'%']);
+        }else if(empty($_POST['keyword']) && !empty($_POST['selected_alcohol'])){
+            $sql = $pdo->prepare('SELECT * FROM shohin WHERE alcohol = ?');
+            $sql->execute([$_POST['selected_alcohol']]);
+        }else{
+            $sql = $pdo->query('SELECT * FROM shohin');
         }
-    } else {
+    }else{
         $sql = $pdo->query('SELECT * FROM shohin');
     }
 
     echo '<tbody>';
     foreach ($sql as $row) {
         echo '<tr>';
-        echo '<td>' . $row['image'] . '</td><br>';
-        echo '<td>' . $row['name'] . '</td>';
+        echo '<td>', '<img src=',$row['image'],'</td><br>';
+        echo '<td>', $row['name'],'</td>';
         echo '</tr>';
     }
     echo '</tbody>';
     echo '</table>';
+    echo '<form action="shohinitirankensaku.php" method="post">';
+    echo '<input type="text" name="keyword">';
+    
+    $alcoholoption=array(3,5,7,9);
+    echo '<select name="selected_alcohol">';
+    echo '<option value="">度数</option>';
+    foreach ($alcoholoption as $value) {
+    echo '<option value="', $value, '">',  $value, '</option>';
+    }
+    echo '</select>';
+    echo '<input type="submit" value="🔍">';
+    echo '</form>';
 ?>
-
-<form action="shohinitirankensaku.php" method="post">
-    <input type="text" name="keyword">
-    <input type="submit" value="🔍">
-    <select>
-        <option value="度数">度数</option>
-        <option value="3">3%</option>
-        <option value="5">5%</option>
-        <option value="7">7%</option>
-        <option value="9">9%</option>
-    </select>
-</form>
 <?php require 'footer.php';?>
-
-<?php
-    //echo '<table>';
-    //$pdo = new PDO($connect,USER,PASS);
-    //if(isset($_POST['keyword'])){
-        //$sql = $pdo->prepare('select * from shohin where name like ?');
-        //$sql->execute(['%'.$_POST['keyword'].'%']);
-
-    //}else{
-        //$sql=$pdo->query('select * from shohin');
-    //}
-    //foreach($sql as $row){
-        //$id=$row['shohin_id'];
-        //echo '<tr>';
-        //echo '<td>',$id, '</td>';
-        //echo '<td>';
-        //echo '<a href="shohinsyousai.php?shohin_id=',$id,'">',$row['name'],'</a>';
-        //echo '</td>';
-        //echo '</tr>';
-    //}
-    //echo '</table>';
-?>
