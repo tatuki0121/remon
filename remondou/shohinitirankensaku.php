@@ -25,7 +25,7 @@
     foreach ($sql as $row) {
         echo '<tr>';
         echo '<td>', '<img src=',$row['image'],'</td><br>';
-        echo '<td>', $row['name'],'</td>';
+        echo '<td>', '<a href=shohinsyosai.php?id=',$row['shohin_id'],'>', $row['name'],'</a></td>';
         echo '</tr>';
     }
     echo '</tbody>';
