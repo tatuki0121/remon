@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
 <?php
-        $mail;
+        $mail='';
         $emassage='';
         if(isset($_POST['but'])){
             unset($_SESSION['user']);
@@ -24,7 +24,7 @@
                 }
                 $hashpass = password_hash($_POST['pass'],PASSWORD_DEFAULT);
                 if(($mail == $_POST['mail']) && ((password_verify($_POST['pass'],$hashpass))) == true ){
-                    header("Location: user-update.php");
+                    header("Location: top.php");
                     exit();
                 }else{
                     $emassage = 'メールアドレスまたはパスワードが違います。';
@@ -32,7 +32,7 @@
             }
             require 'header.php';
             echo '<h1>ログイン</h1>';
-            $emassage;
+            echo $emassage;
             echo '<p>会員の方は登録時に入力されたE-mailとパスワードでログインしてください。</p>';
             echo '<form action="login-1.php" method="post">';
             echo 'メールアドレス　<input type="text" name="mail"><br>';
