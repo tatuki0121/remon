@@ -11,10 +11,10 @@ if(isset($_POST['send'])){
         'pass'=> $_SESSION['ruser']['rpass']
     ];
     unset($_SESSION['ruser']);
-    header('Location: user-update-e.php');
+    header('Location: .php');
     exit();
 }else if(isset($_POST['return'])){
-    header('Location: user-update.php');
+    header('Location: user-update-completed.php');
 }else{
     require 'header.php';
     require 'nav.php';
