@@ -36,7 +36,7 @@ if(isset($_POST['but'])){
     }
     require 'header.php';
     echo '<h1>ログイン</h1>';
-    echo echo $emassage;
+    echo $emassage;
     echo '<p>会員の方は登録時に入力されたE-mailとパスワードでログインしてください。</p>';
     echo '<form action="login-1.php" method="post">';
     echo 'メールアドレス　<input type="text" name="mail"><br>';
