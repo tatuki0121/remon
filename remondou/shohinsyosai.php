@@ -25,7 +25,7 @@ foreach($sql as $row){
     echo '</select></p>';
     echo '<p><input type="submit" value="今すぐ買う"></p>';
     echo '</form>';
-    echo '<form action="cart-in.php" method="post">';
+    echo '<form action=".php" method="post">';
     echo '<p><input type="submit" value="カートに入れる"></p>';
     echo '</form>';
 }
