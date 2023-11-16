@@ -6,7 +6,7 @@ if(isset($_SESSION['user'])){
     unset($_SESSION['user']);
     echo '<form action="login-1.php">';
     echo '<input type="submit" value="ログイン画面へ">';
-    echo '</form>'
+    echo '</form>';
 }
 ?>
 <?php require 'footer.php'; ?>

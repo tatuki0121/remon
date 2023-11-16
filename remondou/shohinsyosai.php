@@ -8,7 +8,7 @@ $sql=$pdo->prepare('select * from shohin where shohin_id=?');
 $sql->execute([$_GET['id']]);
 foreach($sql as $row){
     echo '<p>', '<img src="', $row['image'], '"></p>';
-    echo '<form action="kounyu-kakunin.php?id=',$row['shohin_id'], '" method="post">';
+    echo '<form action="kounyu.php?id=',$row['shohin_id'], '" method="post">';
     echo '<p>', $row['name'], '</p>';
     echo '<p>', $row['volume'], 'ml  ￥', $row['price'], '  ';
 
@@ -23,10 +23,8 @@ foreach($sql as $row){
         echo '<option value="', $b, '">', $b, '</option>';
     }
     echo '</select></p>';
-    echo '<p><input type="submit" value="今すぐ買う"></p>';
-    echo '</form>';
-    echo '<form action=".php" method="post">';
-    echo '<p><input type="submit" value="カートに入れる"></p>';
+    echo '<p><input type="submit" name="nowbuy" value="今すぐ買う"></p>';
+    echo '<p><input type="submit" name="cart-in" value="カートに入れる"></p>';
     echo '</form>';
 }
 
