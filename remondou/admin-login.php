@@ -37,7 +37,7 @@ if(isset($_POST['but'])){
     }
     require 'header.php';
     echo '<h1>ログイン</h1>';
-    echo '<form action="login-1.php" method="post">';
+    echo '<form action="admin-login.php" method="post">';
     echo 'メールアドレス　<input type="text" name="mail"><br>';
     echo 'パスワード　<input type="password" name="pass"><br>';
     echo $emassage;
