@@ -5,7 +5,7 @@
 
 <h1>商品一覧</h1>
 <hr>
-<form action="adimin-toroku_input.php" method="post">
+<form action="admin-toroku_input.php" method="post">
     <input type="submit" name="top" value="商品登録">
 </form>
 
@@ -35,10 +35,10 @@
         echo '<td>', $row['price'], '</td>';
         echo '<td>', $row['stock'], '</td>';
         echo '<td>', $row['image'], '</td>';
-        echo '<td><form action="adimin-shohinkousin.php" method="post">
+        echo '<td><form action="admin-shohinkousin.php" method="post">
         <input type="submit" name="del" value="更新">
         </form></td>';
-        echo '<td><form action="adimin-shohindeletekakunin.php" method="post">
+        echo '<td><form action="admin-shohindeletekakunin.php" method="post">
         <input type="submit" name="del" value="削除">
         </form></td>';
         echo '</tr>';
@@ -47,7 +47,7 @@
     ?>
 
 </table>
-<form action="adimin-top.php" method="post">
+<form action="admin-top.php" method="post">
     <input type="submit" name="top" value="管理者トップに戻る">
 </form>
 
