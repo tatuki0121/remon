@@ -7,9 +7,9 @@
 </head>
 
 <body>
-<img id="logo" src="img/Lemon1.png">
-<img id="satomi" src="img/satomi.png">
-<script src="js/script.js"></script>
+    <img id="logo" src="img/Lemon1.png">
+    <img id="satomi" src="img/satomi.png">
+    <script src="js/script.js"></script>
     <div class="container">
         <div class="keikoku">
             <h3>年齢確認が必要です</h3>
@@ -18,11 +18,21 @@
         <p class="question">あなたは20歳以上ですか？</p>
         
         <div class="button-container">
-            <form method="post">
-                <input type="submit" name="answer" value="Yes" class="button-yes">
-                <input type="submit" name="answer" value="No" class="button-no">
+            <form method="post" id="ageForm">
+                <input type="submit" name="answer" value="Yes" class="button-yes" onclick="submitForm('login.php')">
+                <input type="button" value="No" class="button-no" onclick="goBack()">
             </form>
         </div>
     </div>
+
+    <script>
+        function submitForm(action) {
+            document.getElementById('ageForm').action = action;
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
