@@ -33,7 +33,7 @@
     echo '<form action="shohinitirankensaku.php" method="post">';
     echo '<input type="text" name="keyword">';
     
-    $alcoholoption=array(3,5,7,9);
+    $alcoholoption=array(3,5,7,9,25);
     echo '<select name="selected_alcohol">';
     echo '<option value="">度数</option>';
     foreach ($alcoholoption as $value) {
