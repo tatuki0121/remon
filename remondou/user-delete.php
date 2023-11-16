@@ -16,9 +16,8 @@ $pdo = new PDO($connect, USER, PASS);
         $sql->execute([$user_id]);
         $sql2->execute([$user_id]);
         $sql3->execute([$user_id]);
-        $sql4->execute([]);
-
         $data1=$sql3->fetchAll();
+        $sql4->execute([]);
 
         echo $user_id,"を削除しました<br>";
     }
