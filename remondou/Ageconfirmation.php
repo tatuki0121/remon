@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <img id="logo" src="img/Lemon1.png">
+    <img id="logo" src="img/Lemon.png">
     <img id="satomi" src="img/satomi.png">
     <script src="js/script.js"></script>
     <div class="container">
@@ -19,7 +19,7 @@
         
         <div class="button-container">
             <form method="post" id="ageForm">
-                <input type="submit" name="answer" value="Yes" class="button-yes" onclick="submitForm('login.php')">
+                <input type="submit" name="answer" value="Yes" class="button-yes" onclick="submitForm('login-1.php')">
                 <input type="button" value="No" class="button-no" onclick="goBack()">
             </form>
         </div>
