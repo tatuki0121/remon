@@ -6,7 +6,7 @@
         $pdo = new PDO($connect,USER,PASS);
         $sql = $pdo->prepare("insert into user (mail,pass,torokubi)values (?,?,CURRENT_DATE)");
         $sql->execute([$_SESSION['user']['mail'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT)]);
-        header('Location: sign-up-3.php');
+        header('Location: touroku-kanryou.php');
         exit();
     }else if(isset($_POST['return'])){
         header('Location: sign-up-1.php');
