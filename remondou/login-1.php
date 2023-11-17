@@ -35,30 +35,48 @@ if(isset($_POST['but'])){
         }
     }
     require 'header.php';
+    echo '<link rel="stylesheet" href="css/login-1.css">';
     echo '<h1>ログイン</h1>';
     echo $emassage;
-    echo '<p>会員の方は登録時に入力されたE-mailとパスワードでログインしてください。</p>';
+    echo '<p class="p1">会員の方は登録時に入力されたE-mailとパスワードでログインしてください。</p>';
+    echo '<div class="box">';
+    echo '<table>';
     echo '<form action="login-1.php" method="post">';
-    echo 'メールアドレス　<input type="text" name="mail"><br>';
-    echo 'パスワード　<input type="password" name="pass"><br>';
-    echo '<p><input type="submit" name="but" value="ログイン"></p>';
+    echo '<tr>';
+    echo '<th>メールアドレス</th>　<td><input type="text" name="mail"></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th>パスワード</th>　<td><input type="password" name="pass"></td>';
+    echo '</tr>';
+    echo '</table>';
+    echo '</div>';
+    echo '<p class="button"><input type="submit" name="but" value="ログイン"></p>';
     echo '</form>';
-    echo '<p>まだ会員登録されていない方</p>';
+    echo '<p class="p2">まだ会員登録されていない方</p>';
     echo '<form action="sign-up-1.php" method="post">';
-    echo '<input type="submit" value="新規会員登録">';
+    echo '<p class="button"><input type="submit" value="新規会員登録">';
     echo '</form>';
 }else{
     require 'header.php';
+    echo '<link rel="stylesheet" href="css/login-1.css">';
     echo '<h1>ログイン</h1>';
-    echo '<p>会員の方は登録時に入力されたE-mailとパスワードでログインしてください。</p>';
+    echo '<p class="p1">会員の方は登録時に入力されたE-mailとパスワードでログインしてください。</p>';
+    echo '<div class="box">';
+    echo '<table>';
     echo '<form action="login-1.php" method="post">';
-    echo 'メールアドレス　<input type="text" name="mail"><br>';
-    echo 'パスワード　<input type="password" name="pass"><br>';
-    echo '<p><input type="submit" name="but" value="ログイン"></p>';
+    echo '<tr>';
+    echo '<th>メールアドレス</th>　<td><input type="text" name="mail"></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th>パスワード</th>　<td><input type="password" name="pass"></td>';
+    echo '</tr>';
+    echo '</table>';
+    echo '</div>';
+    echo '<p class="button"><input type="submit" name="but" value="ログイン"></p>';
     echo '</form>';
-    echo '<p>まだ会員登録されていない方</p>';
+    echo '<p class="p2">まだ会員登録されていない方</p>';
     echo '<form action="sign-up-1.php" method="post">';
-    echo '<input type="submit" value="新規会員登録">';
+    echo '<p class="button"><input type="submit" value="新規会員登録">';
     echo '</form>';
 }
 ?>
