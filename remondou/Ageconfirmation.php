@@ -7,8 +7,8 @@
 </head>
 
 <body>
-    <img id="logo" src="image/Lemon.png">
-    <img id="satomi" src="image/satomi.png">
+    <img id="logo" src="img/Lemon.png">
+    <img id="satomi" src="img/satomi.png">
     <script src="js/script.js"></script>
     <div class="container">
         <div class="keikoku">

@@ -7,7 +7,7 @@
     $sql=$pdo->prepare('select * from shohin where shohin_id=?');
     $sql->execute([$id]);
     foreach($sql as $row){
-        echo '<p><img alt="image" src=', $row['image'], 'weight="300" height="300"></p>';
+        echo '<p><img alt="image" src="image/', $row['image'], '"weight="100" height="100"></p>';
         echo '<form action="kounyu-kakunin.php" method="post">';
         echo '<p>商品名：', $row['name'], '</p>';
         echo '<p>容量：', $row['volume'], '<p>';

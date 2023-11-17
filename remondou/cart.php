@@ -1,28 +1,22 @@
 <?php session_start(); ?>
+<?php require 'db-connect.php'; ?>
 <?php require 'header.php'; ?>
 <?php require 'nav.php'; ?>
 <?php
+$pdo=new PDO($connect, USER, PASS);
 if(!empty($_SESSION['item'])){
-    echo '<table>';
-    echo '<tr><th>商品番号</th><th>商品名</th>';
-    echo '<th>価格</th><th>個数</th><th>小計</th><th></th></tr>';
-    $total=0;
-    foreach($_SESSION['product'] as $id=>$product){
-        echo '<tr>';
-        echo '<td>', $id, '</td>';
-        echo '<td><a href=detail.php?id=', $id, '">',
-             $product['name'], '</a></td>';
-        echo '<td>', $product['price'], '</td>';
-        echo '<td>', $product['count'], '</td>';
-        $subtotal=$product['price']*$product['count'];
-        $total+=$subtotal;
-        echo '<td>', $subtotal, '</td>';
-        echo '<td><a href="cart-delete.php?id=', $id, '">削除</a></td>';
-        echo '</tr>';
+    if(!empty($_SESSION['item'])){
+        $sql=$pdo->prepare('select * from shohin where shohin_id=?');
+        foreach($_SESSION['item'] as $id=>$item){
+            $sql->execute([$id]);
+            $row = $sql->fetch();
+            echo '<p><img src="image/', $row['image'], '" width="100" height="100"></p>';
+            echo '<form action="cart.php" method="post">';
+            echo '<p>', $row['name'], '</p>';
+            echo '<p>', $item['stock'];
+            echo '<a href="cart-delete.php?id=', $id, '">削除</a></p>';
+        }
     }
-    echo '<tr><td>合計</td><td></td><td></td><td></td><td>', $total,
-        '</td><td></td></tr>';
-    echo '<table>';
 }else{
     echo 'カートに商品がありません。';
 }
