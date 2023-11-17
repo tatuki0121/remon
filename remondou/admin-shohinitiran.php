@@ -35,12 +35,16 @@
         echo '<td>', $row['price'], '</td>';
         echo '<td>', $row['stock'], '</td>';
         echo '<td>', $row['image'], '</td>';
-        echo '<td><form action="admin-shohinkousin.php" method="post">
-        <input type="submit" name="del" value="更新">
-        </form></td>';
-        echo '<td><form action="admin-shohindeletekakunin.php" method="post">
-        <input type="submit" name="del" value="削除">
-        </form></td>';
+       
+        echo '<td><form action="admin-shohinkousin.php" method="post">';
+        echo '<input type="hidden" name="shohin_id" value="'.$row['shohin_id'].'">';
+        echo '<input type="submit" name="del" value="更新">';
+        echo '</form></td>';
+        
+        echo '<td><form action="admin-shohindelete.php" method="post">';
+        echo '<input type="hidden" name="shohin_id" value="'.$row['shohin_id'].'">';
+        echo '<input type="submit" name="del" value="削除">';
+        echo '</form></td>';
         echo '</tr>';
     }
 
