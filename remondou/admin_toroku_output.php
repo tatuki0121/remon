@@ -24,14 +24,19 @@
     echo '<td>', $_POST['img'], '</td>';
     echo '<td>', $_POST['exp'], '</td>';
     echo '</tr>';
+    session_start();
+    $_SESSION['name'] = $_POST['name'];
+    $_SESSION['capa'] = $_POST['capa'];
+    $_SESSION['dosu'] = $_POST['dosu'];
+    $_SESSION['price'] = $_POST['price'];
+    $_SESSION['suryo'] = $_POST['suryo'];
+    $_SESSION['img'] = $_POST['img'];
+    $_SESSION['exp'] = $_POST['exp'];
     ?>
 </table>
 <p>上記情報を登録しますか？</p>
 <button onclick="location.href='admin_toroku_input.php'">戻る</button>
-<button onclick="location.href='sample.html'">inserへ</button>
-<form action="admin-top.php" method="post">
-</form>
-
+<button onclick="location.href='admin_toroku_kanryo.php'">登録</button>
 </body>
 
 </html>

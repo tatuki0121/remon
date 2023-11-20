@@ -11,8 +11,11 @@ if (isset($_SESSION['admin']) ) {
 if(isset($_POST['return'])){
     //ユーザー削除画面へ
     header('Location:admin-user-delete.php');
+    exit;
 }else if(isset($_POST['delete'])){
-
+    //ユーザー削除完了画面へ
+    header('Location:user-delete-comp.php');
+    exit;
 }else{
     require 'admin-header.php';
     echo '<body>';
@@ -32,10 +35,13 @@ if(isset($_POST['return'])){
         echo '<td>', $row['torokubi'], '</td>';
         echo '<td>', $row['kousinbi'], '</td>';
         echo '</tr>';
-        $user_id = $row['user_id'];
+        $_SESSION['u_delete'] =[
+            'user_id'=>$row['user_id']
+        ]; 
     }
     echo '</table>';
-    echo '<td><form action="user-delete-comp.php" method="post">';
+    
+    echo '<td><form action="admin-user-delete-confir.php" method="post">';
     echo '<input type="hidden" name="user_id" value="',$user_id,'">';
     echo '<input type="submit" name="return" value="戻る">';
     echo '<input type="submit" name="delete" value="削除">';
@@ -43,5 +49,7 @@ if(isset($_POST['return'])){
     echo '</body>';
     echo '</html>';
 }
+}else{
+    echo 'ログインされていません。';
 }
 ?>

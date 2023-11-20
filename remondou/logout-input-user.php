@@ -1,5 +1,7 @@
+<?php session_start(); ?>
 <?php require 'header.php'; ?>
-<?php require 'menu.php'; ?>
+<?php require 'nav.php'; ?>
 <p>ログアウトしますか？</p>
-<a href="logout-output.php">ログアウト</a>
+<form action="logout-output-user.php">
+    <input type="submit" value="ログアウト">
 <?php require 'footer.php'; ?>
