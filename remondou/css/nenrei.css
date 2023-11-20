@@ -1,0 +1,66 @@
+body {
+    background-color: #111111;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.keikoku {
+    text-align: center;
+    font-size: 24px;
+    color: #FF0000;
+}
+
+.question {
+    font-size: 24px;
+    color: #FF0000;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-yes,
+.button-no {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 60px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.button-yes:hover,
+.button-no:hover {
+    background-color: #45a049;
+}
+
+#logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px; /* 調整したいサイズに変更 */
+    height: auto;
+}
+
+#satomi {
+    position: absolute;
+    top: 210px;
+    right: 300px;
+    width: 200px; /* 調整したいサイズに変更 */
+    height: auto;
+}

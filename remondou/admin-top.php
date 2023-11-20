@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php require 'header.php'; ?>
-<?php require 'nav.php'; ?>
+<?php require 'logout-input-admin.php'; ?>
 <h1>USER</h1>
 <hr>
 
