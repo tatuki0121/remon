@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php require 'logout-input-admin.php'; ?>
+<?php require 'admin-header'; ?>
 
 <?php
 $pdo = new PDO($connect, USER, PASS);

@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php require 'logout-input-admin.php'; ?>
+<?php require 'admin-header'; ?>
 
 
 <h1>商品一覧</h1>
