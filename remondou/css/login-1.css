@@ -27,4 +27,20 @@ h1 {
 table{
     width: 300px;
     margin: 20px auto;
+    margin-bottom: 50px;
+}
+.error{
+    color: red;
+    text-align: center;
+}
+tr{
+    height: 50px;
+}
+input[type="submit"] {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
