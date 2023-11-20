@@ -35,7 +35,6 @@ if(isset($_POST['but'])){
             }
         }
     }
-    require 'header.php';
     echo '<h1>ログイン</h1>';
     echo '<form action="admin-login.php" method="post">';
     echo 'メールアドレス　<input type="text" name="mail"><br>';
@@ -44,7 +43,6 @@ if(isset($_POST['but'])){
     echo '<p><input type="submit" name="but" value="ログイン"></p>';
     echo '</form>';
 }else{
-    require 'admin-header.php';
     echo '<h1>ログイン</h1>';
     echo '<form action="admin-login.php" method="post">';
     echo 'メールアドレス　<input type="text" name="mail"><br>';
