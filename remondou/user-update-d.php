@@ -11,7 +11,7 @@ if(isset($_POST['send'])){
         'pass'=> $_SESSION['ruser']['rpass']
     ];
     unset($_SESSION['ruser']);
-    header('Location: user-update-complete.php');
+    header('Location: user-update-completed.php');
     exit();
 }else if(isset($_POST['return'])){
     header('Location: user-update.php');
