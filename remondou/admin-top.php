@@ -12,7 +12,7 @@
 
 <h1>Commodity Management</h1>
 <hr>
-<form action="shohin-management.php" method="post">
+<form action="admin-shohinitiran.php" method="post">
     <input type="submit" value="商品管理"><br>
 </form>
 
