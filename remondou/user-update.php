@@ -2,74 +2,80 @@
 <?php require 'db-connect.php'; ?>
 <?php
 $emasagge='';
-$id;
-$mail;
-$pass;
-if(isset($_POST['send'])){
-    // DB問合せ
-    $pdo = new PDO($connect,USER,PASS);
-    $sql1 = $pdo->prepare("select * from user where mail=?");
- 
-    $sql1->execute([$_POST['rmail']]);
- 
-    $data1 = $sql1->fetchAll();
- 
-    foreach($data1 as $row){
-        $id = $row['user_id'];
-        $mail = $row['mail'];
-        $pass = $row['pass'];
-    }
-    if($_POST['rmail'] != '' && strlen($_POST['rpass']) > 5){
-        if(empty($data1) || ($mail == $_SESSION['user']['mail'] &&
-        password_verify($_POST['rpass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT)) == false)){
-             // 存在しない場合、セッションに再登録して確認画面へ遷移 header(location)
-        $_SESSION['ruser']=[
-            'rmail' => $_POST['rmail'],'rpass' => $_POST['rpass'],
-        ];
-        header('Location: user-update-d.php');
-        exit();
-        }else{
-            $ifdata = password_verify($_POST['rpass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT));
-            if($mail == $_SESSION['user']['mail'] &&  $ifdata == true){
-                //ユーザー情報が更新されていなかった場合
-                $emasagge = 'パスワードを変更してください。';
-            }else if(!empty($data1) && $id != $_SESSION['user']['user_id']){
-                //メールアドレスが既に使用されていた場合
-                $emasagge = '入力されたメールアドレスは既に使用されています。';
-            }
-        }
-    }else{
-        //エラー項目の確認
-        if($_POST['rmail'] == ''){
-           //メールアドレスが空の場合
-           $emasagge = 'メールアドレスを入力してください。';
-       }else if($_POST['rpass'] == '' && isset($_POST['rmail'])){
-           //パスワードが空の場合
-           $emasagge = 'パスワードを入力してください。';
-       }else if(strlen($_POST['rpass']) < 6 && isset($_POST['rmail'])){
-           //パスワードが6文字未満の場合
-           $emasagge = 'パスワードは６文字以上に設定してください。';
-       }
-    }
-     // 存在してる場合→エラーメッセージ　画面はこのまま     ]
-     require 'header.php';
-     require 'nav.php';
-     echo 'ユーザー情報更新';
-     echo '<form action="user-update.php" method="post">';
-     echo '<p>メールアドレス<input type="text" name="rmail" value="',$_POST['rmail'],'"></p>';
-     echo '<p>パスワード<input type="text" name="rpass" value="',$_POST['rpass'],'"></p>';
-     echo $emasagge;
-     echo '<br>';
-     echo '<input type="submit" value="登録" name="send">';
-     echo '</form>';
+if(!isset($_SESSION['user'])){
+    echo 'ログインしていません。ログインしてください';
 }else{
+    $id=$_SESSION['user']['user_id'];
+    $mail=$_SESSION['user']['mail'];
+    $pass=$_SESSION['user']['pass'];
+    if(isset($_POST['send'])){
+        // DB問合せ
+        $pdo = new PDO($connect,USER,PASS);
+        $sql1 = $pdo->prepare("select * from user where mail=?");
+
+        $sql1->execute([$_POST['mail']]);
+
+        $data1 = $sql1->fetchAll();
+
+        foreach($data1 as $row){
+            $id = $row['user_id'];
+            $mail = $row['mail'];
+            $pass = $row['pass'];
+        }
+        if($_POST['mail'] != '' && strlen($_POST['pass']) > 5){
+            if(empty($data1) || ($mail == $_SESSION['user']['mail'] && 
+                password_verify($_POST['pass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT)) == false)){
+                    // 存在しない場合、セッションに再登録して確認画面へ遷移 header(location)
+                $_SESSION['ruser']=[
+                    'rmail' => $_POST['mail'],'rpass' => $_POST['pass'],
+                ];
+                header('Location: user-update-d.php');
+                exit();
+            }else{
+                $ifdata = password_verify($_POST['pass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT));
+                if($mail == $_SESSION['user']['mail'] &&  $ifdata == true){
+                    //ユーザー情報が更新されていなかった場合
+                    $emasagge = 'パスワードを変更してください。';
+                }else if(!empty($data1) && $id != $_SESSION['user']['user_id']){
+                    //メールアドレスが既に使用されていた場合
+                    $emasagge = '入力されたメールアドレスは既に使用されています。';
+                }
+            }
+        }else{
+            //エラー項目の確認
+            if($_POST['mail'] == ''){
+                //メールアドレスが空の場合
+                $emasagge = 'メールアドレスを入力してください。';
+            }else if($_POST['pass'] == '' && isset($_POST['mail'])){
+                //パスワードが空の場合
+                $emasagge = 'パスワードを入力してください。';
+            }else if(strlen($_POST['pass']) < 6 && isset($_POST['mail'])){
+                //パスワードが6文字未満の場合
+                $emasagge = 'パスワードは６文字以上に設定してください。';
+            }
+            $mail=$_POST['mail'];
+            $pass=$_POST['pass'];
+        }
+    }
+    // 存在してる場合→エラーメッセージ　画面はこのまま     ]
     require 'header.php';
+    echo '<link rel="stylesheet" href="css/user-update.css">';
     require 'nav.php';
-    echo 'ユーザー情報更新';
+    echo '<h1>ユーザー情報更新</h1>';
+    echo '<div class="box">';
+    echo '<table>';
     echo '<form action="user-update.php" method="post">';
-    echo '<p>メールアドレス<input type="text" name="rmail" value="',$_SESSION['user']['mail'],'"></p>';
-    echo '<p>パスワード<input type="text" name="rpass" value="',$_SESSION['user']['pass'],'"></p>';
-    echo '<input type="submit" value="登録" name="send">';
+    echo '<tr>';
+    echo '<th>メールアドレス</th><td><input type="text" name="mail" value="',$mail,'"></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th>パスワード</th><td><input type="text" name="pass" value="',$pass,'"></td>';
+    echo '</tr>';
+    echo '<table>';
+    echo '<div>';
+    echo '<p class="error">',$emasagge,'</p>';
+    echo '<p class="button"><input type="submit" value="登録" name="send"></p>';
     echo '</form>';
 }
 ?>
+<?php require 'footer.php'; ?>
