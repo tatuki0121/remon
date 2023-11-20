@@ -7,7 +7,7 @@ $pdo=new PDO($connect, USER, PASS);
 $sql=$pdo->prepare('select * from shohin where shohin_id=?');
 $sql->execute([$_GET['id']]);
 foreach($sql as $row){
-    echo '<p>', '<img src="', $row['image'], '"></p>';
+    echo '<p>', '<img src="image/', $row['image'], '"width="100" height="100"></p>';
     echo '<form action="kounyu.php?id=',$row['shohin_id'], '" method="post">';
     echo '<p>', $row['name'], '</p>';
     echo '<p>', $row['volume'], 'ml  ￥', $row['price'], '  ';
