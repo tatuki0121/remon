@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
 <?php require 'admin-header.php'; ?>
 
@@ -24,7 +23,6 @@
     echo '<td>', $_POST['img'], '</td>';
     echo '<td>', $_POST['exp'], '</td>';
     echo '</tr>';
-    session_start();
     $_SESSION['name'] = $_POST['name'];
     $_SESSION['capa'] = $_POST['capa'];
     $_SESSION['dosu'] = $_POST['dosu'];

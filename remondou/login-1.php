@@ -37,7 +37,6 @@ if(isset($_POST['but'])){
     require 'header.php';
     echo '<link rel="stylesheet" href="css/login-1.css">';
     echo '<h1>ログイン</h1>';
-    echo $emassage;
     echo '<p class="p1">会員の方は登録時に入力されたE-mailとパスワードでログインしてください。</p>';
     echo '<div class="box">';
     echo '<table>';
@@ -50,6 +49,7 @@ if(isset($_POST['but'])){
     echo '</tr>';
     echo '</table>';
     echo '</div>';
+    echo '<p class="error">',$emassage, '</p>';
     echo '<p class="button"><input type="submit" name="but" value="ログイン"></p>';
     echo '</form>';
     echo '<p class="p2">まだ会員登録されていない方</p>';
