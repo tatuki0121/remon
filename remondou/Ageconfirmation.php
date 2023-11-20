@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>年齢確認画面</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nenrei.css">
 </head>
 
 <body>
