@@ -49,5 +49,4 @@ if ($row) {
 
 
 <input type="button" onclick="location.href='admin-shohinitiran.php'" value="戻る">
-<input type="button" onclick="location.href='admin-shohindeletekanyo.php'" value="削除">
-<input type="hidden" name="shohin_id" value="<?= $shohin_id ?>">
+<input type="button" onclick="location.href='admin-shohindeletekanyo.php?shohin_id='<?= $shohin_id ?>" value="削除">
