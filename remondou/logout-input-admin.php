@@ -1,6 +1,10 @@
-<?php require 'header.php'; ?>
-<?php require 'menu.php'; ?>
+<?php session_start(); ?>
+<p><img src="image/!.jpg"></p>
 <p>ログアウトしますか？</p>
-<a href="top.php">トップ画面に戻る</a>
-<a href="logout-output.php">ログアウト</a>
+<form action="admin-top.php" method="POST">
+    <input type="submit" value="トップ画面へ">
+</form>
+<form action="logout-output-admin.php" method="POST">
+    <input type="submit" value="ログアウト">
+</form>
 <?php require 'footer.php'; ?>
