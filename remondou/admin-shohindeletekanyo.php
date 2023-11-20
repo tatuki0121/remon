@@ -5,9 +5,9 @@
 <?php
 $pdo = new PDO($connect, USER, PASS);
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $shohin_id = $_POST['shohin_id'];
+
+    $shohin_id = $_GET['shohin_id'];
     
     $stmt = $pdo->prepare('DELETE FROM shohin WHERE shohin_id = ?');
     $stmt->execute([$shohin_id]);
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo "商品の削除に失敗しました。";
     }
-}
+
 
 ?>
 

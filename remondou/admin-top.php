@@ -1,11 +1,10 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php require 'header.php'; ?>
-<?php require 'nav.php'; ?>
+<?php require 'admin-header.php'; ?>
 <h1>USER</h1>
 <hr>
 
-<form action="user-delete.php" method="post">
+<form action="admin-user-delete.php" method="post">
     <input type="submit" value="ユーザー情報削除"><br>
 </form>
 

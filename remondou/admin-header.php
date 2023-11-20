@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -7,5 +8,5 @@
 </head>
 
 <body>
-    <p>ログアウト</p>
+    <a href="logout-input-admin.php"></a>
 </body>

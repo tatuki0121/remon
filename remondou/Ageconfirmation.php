@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>年齢確認画面</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nenrei.css">
 </head>
 
 <body>
-    <img id="logo" src="img/Lemon.png">
-    <img id="satomi" src="img/satomi.png">
+    <img id="logo" src="image/Lemon.png">
+    <img id="satomi" src="image/satomi.png">
     <script src="js/script.js"></script>
     <div class="container">
         <div class="keikoku">
