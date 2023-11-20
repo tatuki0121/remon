@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #000;
+    /* h1の文字色を黒に変更 */
+}
+
+hr {
+    border: 1px solid #dcdcdc;
+    /* hrの境界線の色をかげのような色に変更 */
+    margin-top: 10px;
+    margin-bottom: 80px;
+    /* 下部のマージンを20pxから30pxに変更 */
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    /* ボタンのpaddingを変更 */
+    font-size: 18px;
+    /* ボタンのフォントサイズを変更 */
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
