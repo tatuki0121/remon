@@ -4,7 +4,7 @@
 <h1>USER</h1>
 <hr>
 
-<form action="user-delete.php" method="post">
+<form action="admin-user-delete.php" method="post">
     <input type="submit" value="ユーザー情報削除"><br>
 </form>
 
