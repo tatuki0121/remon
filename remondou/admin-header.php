@@ -7,5 +7,5 @@
 </head>
 
 <body>
-    <a href="logout-input-admin.php"></a>
+    <a href="logout-input-admin.php">ログアウト</a>
 </body>
