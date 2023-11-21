@@ -1,8 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #000;
+}
+
+hr {
+    border: 1px solid #dcdcdc;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+
 form {
     margin-bottom: 20px;
     text-align: center;
-    position: relative;
-    /* Add this line */
 }
 
 input[type="submit"] {
@@ -13,27 +29,49 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
     display: inline-block;
-    position: absolute;
-    /* Add this line */
-    right: 0;
-    /* Add this line */
-    top: 0;
-    /* Add this line */
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px auto;
-    /* Update this line */
-    text-align: center;
-    /* Add this line */
+    margin-top: 20px;
 }
 
 th,
 td {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: left;
 }
 
-/* Rest of your existing styles... */
+th {
+    background-color: #f2f2f2;
+}
+
+form[action="admin_toroku_input.php"] {
+    margin-top: 0;
+}
+
+input[name="top"] {
+    margin-top: 10px;
+}
+
+input[name="del"] {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+input[name="del"]:hover {
+    background-color: #ddd;
+}
+
+form[action="admin-top.php"] {
+    margin-top: 20px;
+}
