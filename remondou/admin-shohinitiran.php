@@ -1,11 +1,12 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
 <?php require 'admin-header.php'; ?>
+<link rel="stylesheet" href="css/admin-shohinitiran.css">';
 
 
 <h1>商品一覧</h1>
 <hr>
-<form action="admin-toroku_input.php" method="post">
+<form action="admin_toroku_input.php" method="post">
     <input type="submit" name="top" value="商品登録">
 </form>
 
@@ -39,9 +40,9 @@
         echo '<td><form action="admin-shohinkousin.php" method="post">';
         echo '<input type="hidden" name="shohin_id" value="'.$row['shohin_id'].'">';
         echo '<input type="submit" name="del" value="更新">';
-        echo '</form></td>';
+        echo '</form>';
         
-        echo '<td><form action="admin-shohindelete.php" method="post">';
+        echo '<form action="admin-shohindelete.php" method="post">';
         echo '<input type="hidden" name="shohin_id" value="'.$row['shohin_id'].'">';
         echo '<input type="submit" name="del" value="削除">';
         echo '</form></td>';

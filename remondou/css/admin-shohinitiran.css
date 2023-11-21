@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #000;
+}
+
+hr {
+    border: 1px solid #dcdcdc;
+    margin-top: 10px;
+    margin-bottom: 80px;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+form[action="admin-toroku_input.php"] {
+    margin-top: 0;
+}
+
+input[name="top"] {
+    margin-top: 10px;
+}
+
+input[name="del"] {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+input[name="del"]:hover {
+    background-color: #ddd;
+}
+
+form[action="admin-top.php"] {
+    margin-top: 20px;
+}
