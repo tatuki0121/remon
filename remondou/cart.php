@@ -18,8 +18,8 @@ if(!empty($_SESSION['item'])){
             echo '</form>';
         }
         echo '<form action ="kounyu-kanryou.php" method ="post">';
-        echo '<input type = "submit" value = "購入する">'
-        echo '</form>'
+        echo '<input type = "submit" value = "購入する">';
+        echo '</form>';
     }
 }else{
     echo 'カートに商品がありません。';
