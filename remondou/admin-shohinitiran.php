@@ -6,7 +6,7 @@
 
 <h1>商品一覧</h1>
 <hr>
-<form action="admin-toroku_input.php" method="post">
+<form action="admin_toroku_input.php" method="post">
     <input type="submit" name="top" value="商品登録">
 </form>
 
