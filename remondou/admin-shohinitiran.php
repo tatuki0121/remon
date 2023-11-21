@@ -40,9 +40,9 @@
         echo '<td><form action="admin-shohinkousin.php" method="post">';
         echo '<input type="hidden" name="shohin_id" value="'.$row['shohin_id'].'">';
         echo '<input type="submit" name="del" value="更新">';
-        echo '</form></td>';
+        echo '</form>';
         
-        echo '<td><form action="admin-shohindelete.php" method="post">';
+        echo '<form action="admin-shohindelete.php" method="post">';
         echo '<input type="hidden" name="shohin_id" value="'.$row['shohin_id'].'">';
         echo '<input type="submit" name="del" value="削除">';
         echo '</form></td>';
