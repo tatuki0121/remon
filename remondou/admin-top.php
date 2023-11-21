@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
 <?php require 'admin-header.php'; ?>
-<link rel="stylesheet" href="css/admin-top.css">';
+<link rel="stylesheet" href="css/admin-top.css">
 <h1>USER</h1>
 <hr>
 
