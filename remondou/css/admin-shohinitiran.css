@@ -52,8 +52,11 @@ th {
     background-color: #f2f2f2;
 }
 
+
 form[action="admin_toroku_input.php"] {
     margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 input[name="top"] {
@@ -66,6 +69,7 @@ input[name="del"] {
     border: 1px solid #ddd;
     padding: 8px 15px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 input[name="del"]:hover {
