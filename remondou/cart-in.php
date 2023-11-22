@@ -18,4 +18,3 @@ echo '<p><input type="submit" value="トップ画面へ"></p>';
 echo '</form>';
 ?>
 <?php require 'footer.php'; ?>
-
