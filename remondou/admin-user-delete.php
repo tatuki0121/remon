@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<link rel="stylesheet" href="css/admin-delete.css">
 <?php
 $pdo = new PDO($connect, USER, PASS);
 if (isset($_SESSION['admin']) ) {
@@ -32,6 +33,9 @@ echo '<table>';
     }
 
     echo '</table>';
+    echo '<form action="admin-top.php">';
+    echo '<input type="submit" value="管理者トップに戻る">';
+    echo '</form>';
     echo '</body>';
 }else{
     echo 'ログインされていません';
