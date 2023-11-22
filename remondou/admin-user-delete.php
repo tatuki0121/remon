@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<link rel="stylesheet" href="css/admin-delete.css">
 <?php
 $pdo = new PDO($connect, USER, PASS);
 if (isset($_SESSION['admin']) ) {

@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    margin: 20px;
+    text-align: center;
+    /* Center content within the container */
+}
+
+h1 {
+    color: #000;
+}
+
+hr {
+    border: 1px solid #dcdcdc;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    /* Center the table within its container */
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+}
+
+form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
+
+input[name="del"] {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+input[name="del"]:hover {
+    background-color: #ddd;
+}
