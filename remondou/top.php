@@ -24,15 +24,15 @@
 
 <body>
     <div class="slider">
-        <img src="test.img/test1.jpg" width="500" height="400" alt="">
-        <img src="test.img/test2.jpg" width="500" height="400" alt="">
-        <img src="test.img/test3.jpg" width="500" height="400" alt="">
+        <img src="image/remondo.jpeg" width="500" height="420" alt="">
+        <img src="image/hachimitu.jpeg" width="500" height="420" alt="">
+        <img src="image/shioremon.jpeg" width="500" height="420" alt="">
     </div>
     <h2 class="item_info">製品情報</h2>
     <ul>
-        <li><img src="test.img/test1.jpg" width="300" height="200" alt=""></li>
-        <li><img src="test.img/test2.jpg" width="300" height="200" alt=""></li>
-        <li><img src="test.img/test3.jpg" width="300" height="200" alt=""></li>
+        <li><img src="image/remondo.jpeg" width="300" height="200" alt=""></li>
+        <li><img src="image/hachimitu.jpeg" width="300" height="200" alt=""></li>
+        <li><img src="image/shioremon.jpeg" width="300" height="200" alt=""></li>
     </ul>
     <p>
     <h2>こだわり</h2>

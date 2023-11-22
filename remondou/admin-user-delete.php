@@ -32,6 +32,9 @@ echo '<table>';
     }
 
     echo '</table>';
+    echo '<form action="admin-top.php">';
+    echo '<input type="submit" value="管理者トップに戻る">';
+    echo '</form>';
     echo '</body>';
 }else{
     echo 'ログインされていません';

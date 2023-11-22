@@ -1,6 +1,7 @@
-<?php
-require 'db-connect.php';
-require 'admin-header.php';
+<?php session_start(); ?>
+<?php require 'db-connect.php'; ?>
+<?php require 'admin-header.php';
+
 
 // セッション変数からデータを取得
 $name = $_SESSION['name'];
