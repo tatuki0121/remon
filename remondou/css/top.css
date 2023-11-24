@@ -30,5 +30,6 @@ h2 {
 }
 .exp {
   text-align: center; /* テキストを中央に配置 */
-  margin-top: 5px;
+  margin-top: 20px; /* 上側のマージンを広げる */
+  margin-bottom: 20px; /* 下側のマージンを広げる */
 }
