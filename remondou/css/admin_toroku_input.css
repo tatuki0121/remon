@@ -26,7 +26,6 @@
   cursor: pointer;
   font-size: 18px;
 }
-
 .center form input[type="submit"]:hover,
 .center form input[type="button"]:hover {
   background-color: #000500;
