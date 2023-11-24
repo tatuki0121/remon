@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 18px;
+    /* 文字を大きく */
+}
+
+h1 {
+    color: #000;
+}
+
+hr {
+    border: 2px solid #dcdcdc;
+    /* 枠線を太く */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #333;
+    /* 枠線を太く */
+}
+
+th,
+td {
+    border: 2px solid #333;
+    /* 枠線を太く */
+    padding: 15px;
+    /* パディングを大きく */
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    /* 中央に配置 */
+    margin-bottom: 20px;
+    /* 下の余白を追加 */
+}
+
+input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 30px;
+    /* ボタンサイズを大きく */
+    font-size: 18px;
+    /* 文字を大きく */
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 30px;
+    /* ボタン間のスペースを広げる */
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
