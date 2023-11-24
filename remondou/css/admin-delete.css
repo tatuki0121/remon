@@ -29,18 +29,23 @@ table {
     border-collapse: collapse;
     margin-top: 10px;
     margin-bottom: 20px;
+    border: 2px solid #333;
+    /* Darker border color for the entire table */
 }
 
 th,
 td {
-    border: 1px solid #ddd;
+    border: 1px solid #333;
+    /* Darker border color for cells */
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    /* Lighter background for table headers */
+    border: 1px solid #333;
+    /* Unified color for table header border */
 }
 
 form {
@@ -65,7 +70,8 @@ input[type="submit"]:hover {
 input[name="del"] {
     background-color: #fff;
     color: #333;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
+    /* Unified color for delete button border */
     padding: 6px 12px;
     cursor: pointer;
     margin-left: 10px;
