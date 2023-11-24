@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background: linear-gradient(to bottom, black, transparent);
   color: white; /* 文字色を白にする例 */
   text-align: center; /* テキストを中央揃えにする例 */
   padding: 20px; /* 余白を追加する例 */
@@ -8,4 +8,5 @@ body {
 
 a {
   color: white; /* リンクの文字色を白にする例 */
+  text-decoration: none; /* リンクの下線をなくす例 */
 }
