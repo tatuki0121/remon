@@ -3,10 +3,12 @@
 <?php require 'header.php'; ?>
 <?php require 'nav.php'; ?>
 <?php
+echo '<link rel="stylesheet" href="css/shohinsyosai.css">';
 $pdo=new PDO($connect, USER, PASS);
 $sql=$pdo->prepare('select * from shohin where shohin_id=?');
 $sql->execute([$_GET['id']]);
 foreach($sql as $row){
+    echo '<div id="syosai">';
     echo '<p>', '<img src="image/', $row['image'], '"width="100" height="100"></p>';
     echo '<form action="kounyu.php?id=',$row['shohin_id'], '" method="post">';
     echo '<p>', $row['name'], '</p>';
@@ -23,9 +25,12 @@ foreach($sql as $row){
         echo '<option value="', $b, '">', $b, '</option>';
     }
     echo '</select></p>';
-    echo '<p><input type="submit" name="nowbuy" value="今すぐ買う"></p>';
-    echo '<p><input type="submit" name="cart-in" value="カートに入れる"></p>';
+    echo '</div>';
+    echo '<div id="button">';
+    echo '<input type="submit" name="nowbuy" value="今すぐ買う">';
+    echo '<input type="submit" name="cart-in" value="カートに入れる">';
     echo '</form>';
+    echo '</div>';
 }
 
 ?>
