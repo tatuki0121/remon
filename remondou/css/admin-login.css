@@ -2,11 +2,8 @@ h1 {
     text-align: center;
 }
 
-.p1 {
-    text-align: right;
-}
-
-.box {
+.box{
+    margin-top: 10px;
     display: block;
     width: 500px;
     text-align: center;
@@ -17,34 +14,17 @@ h1 {
     border: solid 3px #dcdcdc;
 }
 
-.p2 {
-    margin-left: 250px;
-    text-align: left;
-}
-
-.p4 {
-    text-align: center;
-}
-
-.button {
-    text-align: center;
-}
-
-table {
+table{
     width: 300px;
     margin: 20px auto;
     margin-bottom: 50px;
 }
-
-.error {
-    color: red;
+p{
     text-align: center;
 }
-
-tr {
+tr{
     height: 50px;
 }
-
 input[type="submit"] {
     background-color: #111;
     color: #fff;
@@ -52,4 +32,7 @@ input[type="submit"] {
     font-size: 16px;
     border: none;
     cursor: pointer;
+}
+p input{
+    margin-top: 20px;
 }
