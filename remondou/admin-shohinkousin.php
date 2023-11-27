@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>檸檬堂販売サイトa</title>
+    <title>檸檬堂販売サイト</title>
 </head>
 
 <body>

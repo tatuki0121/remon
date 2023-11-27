@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
 <?php require 'admin-header.php'; ?>
 
@@ -34,7 +35,7 @@
 </table>
 <p>上記情報を更新しますか？</p>
 <button onclick="location.href='admin_kanryo_input.php'">戻る</button>
-<button onclick="location.href='admin_update_kanryo.php'">更新</button>
+<button onclick="location.href='admin-update-kanryo.php'">更新</button>
 </body>
 
 </html>
