@@ -2,7 +2,7 @@
 <?php require 'db-connect.php'; ?>
 <?php require 'admin-header.php'; ?>
 <link rel="stylesheet" href="css/admin-top.css">
-<h1>USER</h1>
+<h1>USER Management</h1>
 <hr>
 
 <form action="admin-user-delete.php" method="post">
