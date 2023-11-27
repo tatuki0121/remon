@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'db-connect.php';
 require 'admin-header.php';
 
@@ -14,8 +15,7 @@ $exp = $_SESSION['exp'];
 $pdo = new PDO($connect, USER, PASS);
 
 // データベースに商品を登録するクエリ
-$stmt = $pdo->prepare('UPDATE shohin SET name = ?, exp = ?, volume = ?, alcohol = ?, price = ?, stock = ?, image = ? WHERE some_column = ?');
-
+$stmt = $pdo->prepare('INSERT INTO shohin (name, exp, volume, alcohol, price, stock, image) VALUES (?, ?, ?, ?, ?, ?, ?)');
 $stmt->execute([$name, $exp, $capa, $dosu, $price, $suryo, $img]);
 ?>
 
