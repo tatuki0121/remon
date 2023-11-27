@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<link rel="stylesheet" href="css/admin-login.css">
 <?php
 $email='';
 $emassage='';
