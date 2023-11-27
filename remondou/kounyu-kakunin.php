@@ -7,19 +7,17 @@
     $sql->execute([$id]);
     foreach($sql as $row){
         echo '<p><img alt="image" src="image/', $row['image'], '"weight="100" height="100"></p>';
-        echo '<form action="kounyu-kakunin.php" method="post">';
+        echo '<form action="kounyu-kanryou.php" method="post">';
         echo '<p>商品名：', $row['name'], '</p>';
         echo '<p>容量：', $row['volume'], '<p>';
         echo '<p>価格：', $row['price'], '</p>';
         echo '<p>数量：', $_POST['stock'], '</p>';
+        echo '<input type="hidden" name="shohin_id" value="', $row['shohin_id'], '">';
+        echo '<input type="hidden" name="stock" value="', $_POST['stock'], '">';
+        echo '<p><input type="submit" name="nowbuy2" value="購入する"></p>';
         echo '</form>';
         echo '<form action="shohinitirankensaku.php" method="post">';
         echo '<p><input type="submit" value="商品一覧検索画面に戻る"></p>';
-        echo '</form>';
-        echo '<form action="kounyu-kanryou.php" method="post">';
-        echo '<input type="hidden" name="shohin_id" value="', $row['shohin_id'], '">';
-        echo '<input type="hidden" name="stock" value="', $_POST['stock'], '">';
-        echo '<p><input type="submit" value="購入する"></p>';
         echo '</form>';
     }
 ?>

@@ -11,6 +11,7 @@ $sql = $pdo->prepare("INSERT INTO purchase (user_id, torokubi) VALUES (?, ?)");
 $sql->execute([$user_id, $torokubi]);
 $purchase_id = $pdo->lastInsertId();
 $sql = $pdo->prepare('select * from shohin where shohin_id = ?');
+if(isset($_POST['cartbuy'])){
 foreach($_SESSION['item'] as $id => $item){
 
     $sql->bindValue(1, $id, PDO::PARAM_INT);
@@ -35,9 +36,24 @@ foreach($_SESSION['item'] as $id => $item){
         //購入詳細テーブルに購入IDと商品ID、数量、金額を追加
         $sql3 = $pdo->prepare("INSERT INTO purchase_detail (purchase_id, shohin_id, number, price) VALUES (?, ?, ?, ?)");
         $sql3->execute([$purchase_id, $shohin_id, $number, $price]);
+        unset($_SESSION['item'][$shohin_id]);
     }
 }
-    unset($_SESSION['item']);
+}else if(isset($_POST['nowbuy2'])){
+    $sql->bindValue(1, intval($_POST['shohin_id']), PDO::PARAM_INT);
+    $sql->execute();
+    $rows = $sql->fetchAll();
+    foreach ($rows as $row) {
+        $stock = $row['stock'] - $_POST['stock'];
+        if ($stock > 0) {
+            $updateSql = 'update shohin set stock = ? where shohin_id = ?';
+            $sql = $pdo->prepare($updateSql);
+            $sql->bindValue(1, intval($stock), PDO::PARAM_INT);
+            $sql->bindValue(2, intval($_POST['shohin_id']), PDO::PARAM_INT);
+            $sql->execute();
+        }
+    }
+}
 ?>
 
 <form action="top.php" method="POST">
