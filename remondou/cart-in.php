@@ -1,7 +1,7 @@
 <?php require 'header.php'; ?>
 <?php require 'nav.php'; ?>
 <?php
-
+echo '<link rel="stylesheet" href="css/cart-in.css">';
 if(!isset($_SESSION['item'])){
     $_SESSION['item']=[];
 }
@@ -13,10 +13,11 @@ if(isset($_SESSION['item'][$id])){
 $_SESSION['item'][$id]=[
     'shohin_id'=>$id,'stock'=>$count+$_POST['stock']
 ];
-
 echo '<p>カートに商品を追加しました</p>';
 echo '<form action="top.php" method="post">';
+echo '<div id="button">';
 echo '<p><input type="submit" value="トップ画面へ"></p>';
+echo '</div>';
 echo '</form>';
 ?>
 <?php require 'footer.php'; ?>
