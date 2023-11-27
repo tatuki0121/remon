@@ -18,7 +18,7 @@ if(!empty($_SESSION['item'])){
             echo '</form>';
         }
         echo '<form action ="kounyu-kanryou.php" method ="post">';
-        echo '<input type = "submit" value = "購入する">';
+        echo '<input type = "submit"  name="cartbuy" value = "購入する">';
         echo '</form>';
     }
 }else{
