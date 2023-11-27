@@ -1,0 +1,12 @@
+body {
+  background: linear-gradient(to bottom, black, transparent);
+  color: white; /* 文字色を白にする例 */
+  text-align: center; /* テキストを中央揃えにする例 */
+  padding: 20px; /* 余白を追加する例 */
+  font-family: Arial, sans-serif; /* フォントを指定する例 */
+}
+
+a {
+  color: white; /* リンクの文字色を白にする例 */
+  text-decoration: none; /* リンクの下線をなくす例 */
+}

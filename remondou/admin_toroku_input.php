@@ -22,7 +22,7 @@
             <p>価格：<input type="number" name="price" required></p>
             <p>在庫数量：<input type="number" name="suryo" required></p>
             <p>商品画像：<input type="file" name="img" required></p>
-            <p>商品説明：<input type="text" name="exp" required></p>
+            <p>商品説明：<textarea name="exp" required></textarea></p>
             <input type="button" onclick="location.href='adimin-shohinitiran.php'" value="戻る">
             <input type="submit" value="登録">
         </form>
