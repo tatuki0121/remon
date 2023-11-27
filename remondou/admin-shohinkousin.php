@@ -2,6 +2,7 @@
 <?php require 'db-connect.php'; ?>
 <?php require 'admin-header.php'; ?>
 
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -9,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>檸檬堂販売サイト</title>
+    <link rel="stylesheet" href="css/admin-shohinkousin.css">
 </head>
 
 <body>
@@ -20,7 +22,7 @@
     <hr>
 
     <form action="admin-update-output.php" method="post">
-        <input type = "hidden" name = "shohin_id" value = "<?= $shohin_id ?>">
+        <input type="hidden" name="shohin_id" value="<?= $shohin_id ?>">
         <p>商品名：<input type="text" name="name" required></p>
         <p>内容量：<input type="number" name="capa" required></p>
         <p>度数：<input type="number" name="dosu" required></p>
