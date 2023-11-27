@@ -19,6 +19,7 @@ if(isset($_POST['return'])){
     exit;
 }else{
     require 'admin-header.php';
+    echo '<link rel="stylesheet" href="css/admin-user-delete-confir.css">';
     echo '<body>';
     echo '<h1>ユーザー削除確認</h1>';
     echo '<hr>';
