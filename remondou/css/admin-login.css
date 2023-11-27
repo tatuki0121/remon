@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+}
+
+.box{
+    margin-top: 10px;
+    display: block;
+    width: 500px;
+    text-align: center;
+    background-color: #dcdcdc;
+    padding: 0.5em 1em;
+    margin: auto;
+    font-weight: bold;
+    border: solid 3px #dcdcdc;
+}
+
+table{
+    width: 300px;
+    margin: 20px auto;
+    margin-bottom: 50px;
+}
+p{
+    text-align: center;
+}
+tr{
+    height: 50px;
+}
+input[type="submit"] {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+p input{
+    margin-top: 20px;
+}

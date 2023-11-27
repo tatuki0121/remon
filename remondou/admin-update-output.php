@@ -24,6 +24,7 @@
     echo '<td>', $_POST['img'], '</td>';
     echo '<td>', $_POST['exp'], '</td>';
     echo '</tr>';
+    $_SESSION['id'] = $_POST['shohin_id'];
     $_SESSION['name'] = $_POST['name'];
     $_SESSION['capa'] = $_POST['capa'];
     $_SESSION['dosu'] = $_POST['dosu'];

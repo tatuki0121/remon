@@ -12,10 +12,15 @@
 </head>
 
 <body>
+    <?php
+    $shohin_id = $_POST['shohin_id'];
+    
+    ?>
     <h2>商品更新</h2>
     <hr>
 
     <form action="admin-update-output.php" method="post">
+        <input type = "hidden" name = "shohin_id" value = "<?= $shohin_id ?>">
         <p>商品名：<input type="text" name="name" required></p>
         <p>内容量：<input type="number" name="capa" required></p>
         <p>度数：<input type="number" name="dosu" required></p>

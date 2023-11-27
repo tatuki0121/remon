@@ -1,12 +1,12 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<link rel="stylesheet" href="css/admin-delete.css">
 <?php
 $pdo = new PDO($connect, USER, PASS);
 if (isset($_SESSION['admin']) ) {
     $user_id='';
     $pdo = new PDO($connect, USER, PASS);
 require 'admin-header.php';
+echo '<link rel="stylesheet" href="css/admin-delete.css">';
 echo '<body>';
 echo '<h1>ユーザー一覧</h1>';
 echo '<hr>';
