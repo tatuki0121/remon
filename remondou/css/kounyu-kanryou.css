@@ -12,7 +12,6 @@ input[type="submit"] {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    position: relative; 
+    position: absolute; 
     top: 50px;
-    
 }

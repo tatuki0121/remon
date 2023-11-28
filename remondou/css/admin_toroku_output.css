@@ -1,0 +1,17 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+.custom-button {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  /* 他にも必要なスタイルを追加 */
+}
