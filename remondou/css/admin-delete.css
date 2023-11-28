@@ -1,3 +1,5 @@
+/* admin-delete.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -29,23 +31,18 @@ table {
     border-collapse: collapse;
     margin-top: 10px;
     margin-bottom: 20px;
-    border: 2px solid #333;
-    /* Darker border color for the entire table */
 }
 
 th,
 td {
-    border: 1px solid #333;
-    /* Darker border color for cells */
+    border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #f8f8f8;
-    /* Lighter background for table headers */
-    border: 1px solid #333;
-    /* Unified color for table header border */
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
 }
 
 form {
@@ -53,6 +50,8 @@ form {
     text-align: center;
 }
 
+/* 追加部分: ボタンのスタイル */
+input[type="button"],
 input[type="submit"] {
     background-color: #000;
     color: #fff;
@@ -61,23 +60,15 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
     display: inline-block;
+    /* margin を削除 */
 }
 
+input[type="button"]:hover,
 input[type="submit"]:hover {
     background-color: #333;
 }
 
-input[name="del"] {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #333;
-    /* Unified color for delete button border */
-    padding: 6px 12px;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-top: 20px;
-}
-
-input[name="del"]:hover {
-    background-color: #ddd;
+/* 追加部分: ボタンと文章を中央に配置 */
+form {
+    text-align: center;
 }
