@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #007bff;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.error {
+    background-color: #ffcccc;
+    color: #cc0000;
+}
+
+.success {
+    background-color: #ccffcc;
+    color: #008000;
+}
+
+form {
+    margin-top: 20px;
+}
