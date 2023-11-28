@@ -35,7 +35,7 @@
     ?>
 </table>
 <p>上記情報を更新しますか？</p>
-<button onclick="location.href='admin_kanryo_input.php'">戻る</button>
+<button onclick="location.href='admin-shohinkousin.php'">戻る</button>
 <button onclick="location.href='admin-update-kanryo.php'">更新</button>
 </body>
 
