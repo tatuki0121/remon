@@ -55,9 +55,9 @@ foreach($_SESSION['item'] as $id => $item){
     }
 }
 ?>
-
+<link rel="stylesheet" href="css/kounyu-kanryou.css">
 <form action="top.php" method="POST">
     <p>購入完了しました。ありがとうございます！</p>
-    <input type="submit" value="トップ画面へ">
+    <p><input type="submit" value="トップ画面へ"></p>
 </form>
 <?php require 'footer.php'; ?>

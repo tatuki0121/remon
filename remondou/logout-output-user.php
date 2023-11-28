@@ -4,12 +4,13 @@
 <?php
 if(isset($_SESSION['user'])){
      unset($_SESSION['user']); 
-     echo 'ログアウト完了しました。'; 
+     echo '<p>ログアウト完了しました。</p>'; 
     }else{ 
-        echo'すでにログアウトしています。';
+        echo'<p>すでにログアウトしています。</p>';
      }
      ?>
+<link rel="stylesheet" href="css/logout-output-user.css">
 <form action="login-1.php">
-<input type="submit" value="ログイン画面へ">
+<p><input type="submit" value="ログイン画面へ"></p>
 </form>
 <?php require 'footer.php'; ?>

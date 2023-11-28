@@ -11,17 +11,27 @@ if(isset($_POST['send'])){
         'pass'=> $_SESSION['ruser']['rpass']
     ];
     unset($_SESSION['ruser']);
-    header('Location: user-update-completed.php');
+    header('Location: shohin-koushin.php');
     exit();
 }else if(isset($_POST['return'])){
     header('Location: user-update.php');
 }else{
     require 'header.php';
+    echo '<link rel="stylesheet" href="css/user-update.css">';
     require 'nav.php';
-    echo 'ユーザー情報更新確認';
+    echo '<h1>ユーザー情報更新確認</h1>';
+    echo '<div class="boxconf">';
+    echo '<table>';
     echo '<form action="user-update-d.php" method="post">';
-    echo '<p>メールアドレス<input type="text" name="mail" value="',$_SESSION['ruser']['rmail'],'" readonly></p>';
-    echo '<p>パスワード<input type="text" name="pass" value="',$_SESSION['ruser']['rpass'],'" readonly></p>';
+    echo '<tr>';
+    echo '<th>メールアドレス</th><td><input type="text" name="mail" value="',$_SESSION['ruser']['rmail'],'" readonly></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th>パスワード</th><td><input type="text" name="pass" value="',$_SESSION['ruser']['rpass'],'" readonly></td>';
+    echo '</tr>';
+    echo '</table>';
+    echo '</div>';
+    echo '<p class="message">上記情報を登録してよろしいですか？</p>';
     echo '<input type="submit" value="戻る" name="return">';
     echo '<input type="submit" value="登録" name="send">';
     echo '</form>';
