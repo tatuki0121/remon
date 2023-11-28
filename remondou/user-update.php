@@ -36,9 +36,11 @@ if(!isset($_SESSION['user'])){
                 if($mail == $_SESSION['user']['mail'] &&  $ifdata == true){
                     //ユーザー情報が更新されていなかった場合
                     $emasagge = 'パスワードを変更してください。';
+                    $pass = $_POST['pass'];
                 }else if(!empty($data1) && $id != $_SESSION['user']['user_id']){
                     //メールアドレスが既に使用されていた場合
                     $emasagge = '入力されたメールアドレスは既に使用されています。';
+                    $pass = $_POST['pass'];
                 }
             }
         }else{
@@ -61,8 +63,10 @@ if(!isset($_SESSION['user'])){
     require 'header.php';
     echo '<link rel="stylesheet" href="css/user-update.css">';
     require 'nav.php';
-    echo '<h1>ユーザー情報更新</h1>';
-    echo '<div class="box">';
+    echo '<h1><div class="user_h1">';
+    echo 'ユーザー情報更新';
+    echo '</div></h1>';
+    echo '<div class=".boxconf">';
     echo '<table>';
     echo '<form action="user-update.php" method="post">';
     echo '<tr>';
@@ -71,8 +75,8 @@ if(!isset($_SESSION['user'])){
     echo '<tr>';
     echo '<th>パスワード</th><td><input type="text" name="pass" value="',$pass,'"></td>';
     echo '</tr>';
-    echo '<table>';
-    echo '<div>';
+    echo '</table>';
+    echo '</div>';
     echo '<p class="error">',$emasagge,'</p>';
     echo '<p class="button"><input type="submit" value="登録" name="send"></p>';
     echo '</form>';
