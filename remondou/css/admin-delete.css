@@ -47,7 +47,6 @@ th {
 
 form {
     margin-bottom: 20px;
-    text-align: center;
 }
 
 /* 追加部分: ボタンのスタイル */
@@ -59,8 +58,6 @@ input[type="submit"] {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    display: inline-block;
-    /* margin を削除 */
 }
 
 input[type="button"]:hover,
@@ -68,7 +65,14 @@ input[type="submit"]:hover {
     background-color: #333;
 }
 
-/* 追加部分: ボタンと文章を中央に配置 */
-form {
+/* 追加部分: ボタンを横並びに配置 */
+.button-container {
     text-align: center;
+}
+
+.button-container input[type="button"],
+.button-container input[type="submit"] {
+    display: inline-block;
+    margin: 10px;
+    /* 余白を追加 */
 }
