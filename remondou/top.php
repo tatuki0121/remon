@@ -24,19 +24,19 @@
 
 <body>
     <div class="slider">
-        <img src="image/remondo.jpeg" width="500" height="420" alt="">
-        <img src="image/hachimitu.jpeg" width="500" height="420" alt="">
-        <img src="image/shioremon.jpeg" width="500" height="420" alt="">
+        <img src="image/remondo.jpeg" width="400" height="200" alt="">
+        <img src="image/hachimitu.jpeg" width="400" height="350" alt="">
+        <img src="image/shioremon.jpeg" width="400" height="350" alt="">
     </div>
-    <h2 class="item_info">製品情報</h2>
+    <h2 class="title is-4 mt-6">製品情報</h2>
     <ul>
-        <li><img src="image/remondo.jpeg" width="300" height="200" alt=""></li>
-        <li><img src="image/hachimitu.jpeg" width="300" height="200" alt=""></li>
-        <li><img src="image/shioremon.jpeg" width="300" height="200" alt=""></li>
+        <li><img src="image/remondo.jpeg" width="300" height="150" alt=""></li>
+        <li><img src="image/hachimitu.jpeg" width="300" height="150" alt=""></li>
+        <li><img src="image/shioremon.jpeg" width="300" height="150" alt=""></li>
     </ul>
-    <p>
-    <h2>こだわり</h2>
-    </p>
+
+    <h2 class="title is-4">こだわり</h2>
+
     <div class="exp">これが、イマドキのレモンサワー。</div>
     <div class="exp">お家で楽しめる、こだわりのおいしさ。</div>
     <p><img src="test.img/test1.jpg" width="350" height="250" alt=""></p>

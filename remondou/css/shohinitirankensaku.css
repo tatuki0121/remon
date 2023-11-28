@@ -1,3 +1,12 @@
-table{
+.itiran{
     float: left;
+}
+#kensaku {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#kensaku input,
+#kensaku select {
+    margin-right: 10px;
 }

@@ -10,7 +10,7 @@ if(isset($_POST['send'])){
     $data2 = $sql2->fetchAll();
     if(empty($data2) && ($_POST['mail'] != '' && strlen($_POST['pass']) > 5)){
         // 存在しない場合、セッションに登録して確認画面へ遷移 header(location)
-        $_SESSION['user']=[
+        $_SESSION['suser']=[
             'mail' => $_POST['mail'],'pass' => $_POST['pass']
         ];
         header('Location: sign-up-2.php');
@@ -51,5 +51,13 @@ if(isset($_POST['send'])){
     echo '<input type="submit" value="登録" name="send">';
     echo '</form>';
 }
+/*if($error['mail'] == 'blank'){
+    echo '※メールアドレスを入力してください。';
+}*/
+/*if($errir['pass'] == 'blank'){
+            echo '※パスワードを入力してください。';
+        }else if($error['pass'] == 'length'){
+            echo '※パスワードは６文字以上に設定してください。';
+        }*/
 ?>
 <?php require 'footer.php'; ?>

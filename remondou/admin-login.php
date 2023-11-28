@@ -35,18 +35,36 @@ if(isset($_POST['but'])){
             }
         }
     }
+    echo '<link rel="stylesheet" href="css/admin-login.css">';
     echo '<h1>ログイン</h1>';
+    echo '<div class="box">';
+    echo '<table>';
     echo '<form action="admin-login.php" method="post">';
-    echo 'メールアドレス　<input type="text" name="mail"><br>';
-    echo 'パスワード　<input type="password" name="pass"><br>';
-    echo $emassage;
+    echo '<tr>';
+    echo '<th>メールアドレス</th>　<td><input type="text" name="mail"></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th>パスワード</th>　<td><input type="password" name="pass"></td>';
+    echo '</tr>';
+    echo '</table>';
+    echo '</div>';
+    echo '<p class="error">',$emassage, '</p>';
     echo '<p><input type="submit" name="but" value="ログイン"></p>';
     echo '</form>';
 }else{
+    echo '<link rel="stylesheet" href="css/admin-login.css">';
     echo '<h1>ログイン</h1>';
+    echo '<div class="box">';
+    echo '<table>';
     echo '<form action="admin-login.php" method="post">';
-    echo 'メールアドレス　<input type="text" name="mail"><br>';
-    echo 'パスワード　<input type="password" name="pass"><br>';
+    echo '<tr>';
+    echo '<th>メールアドレス</th>　<td><input type="text" name="mail"></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th>パスワード</th>　<td><input type="password" name="pass"></td>';
+    echo '</tr>';
+    echo '</table>';
+    echo '</div>';
     echo '<p><input type="submit" name="but" value="ログイン"></p>';
     echo '</form>';
 }

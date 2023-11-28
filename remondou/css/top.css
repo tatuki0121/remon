@@ -10,12 +10,12 @@ ul li {
 }
 .slider {
   width: 50%;
-  height: 500px;
+  height: 600px;
   object-fit: cover;
 }
 .bx-wrapper {
   width: 1000px;
-  height: 300px;
+  height: 460px;
   margin: 0 auto; /* 左右のマージンを自動で均等にすることで中央に配置 */
 }
 p {
@@ -26,10 +26,13 @@ h2 {
   text-align: center;
 }
 .item_info {
-  margin-top: 120px;
+  margin-top: 150px;
 }
 .exp {
   text-align: center; /* テキストを中央に配置 */
-  margin-top: 20px; /* 上側のマージンを広げる */
-  margin-bottom: 20px; /* 下側のマージンを広げる */
+  margin-top: 5px;
+}
+img {
+  height: 440px;
+  width: 350px;
 }
