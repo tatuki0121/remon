@@ -1,0 +1,23 @@
+/* logout-input-admin.css */
+
+.all {
+    text-align: center;
+}
+
+.centered-image {
+    display: block;
+    margin: 80px auto; /* 調整されたマージン */
+    text-align: center;
+}
+
+.logout {
+    text-align: center;
+    color: red;
+    margin-top: -20px;
+    font-size: 24px; /* フォントサイズを追加 */
+}
+
+.form {
+    text-align: center;
+    margin-top: 20px;
+}
