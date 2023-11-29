@@ -37,6 +37,7 @@ echo '<table>';
     echo '<input type="submit" value="管理者トップに戻る">';
     echo '</form>';
     echo '</body>';
+
 }else{
     echo 'ログインされていません';
 }
