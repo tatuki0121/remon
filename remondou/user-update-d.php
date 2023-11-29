@@ -6,10 +6,8 @@ if(isset($_POST['send'])){
     $pdo = new PDO($connect,USER,PASS);
     $sql = $pdo->prepare("update user set mail=?, pass=?, kousinbi=CURRENT_DATE where user_id=?");
     $sql->execute([$_SESSION['ruser']['rmail'],password_hash($_SESSION['ruser']['rpass'],PASSWORD_DEFAULT),$_SESSION['user']['user_id']]);
-    $_SESSION['user']=[
-        'mail'=> $_SESSION['ruser']['rmail'],
-        'pass'=> $_SESSION['ruser']['rpass']
-    ];
+    $_SESSION['user']['mail'] = $_SESSION['ruser']['rmail'];
+    $_SESSION['user']['pass'] = $_SESSION['ruser']['rpass'];
     unset($_SESSION['ruser']);
     header('Location: user-update-completed.php');
     exit();
