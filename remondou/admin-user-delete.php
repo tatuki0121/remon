@@ -1,11 +1,10 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<?php require 'admin-header.php'; ?>
 <?php
-$pdo = new PDO($connect, USER, PASS);
 if (isset($_SESSION['admin']) ) {
-    $user_id='';
     $pdo = new PDO($connect, USER, PASS);
-require 'admin-header.php';
+    $user_id='';
 echo '<link rel="stylesheet" href="css/admin-delete.css">';
 echo '<body>';
 echo '<h1>ユーザー一覧</h1>';
@@ -37,7 +36,6 @@ echo '<table>';
     echo '<input type="submit" value="管理者トップに戻る">';
     echo '</form>';
     echo '</body>';
-
 }else{
     echo 'ログインされていません';
 }
