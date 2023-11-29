@@ -42,8 +42,10 @@
         ?>
     </table>
     <p>上記情報を登録しますか？</p>
-    <button class="custom-button" onclick="location.href='admin_toroku_input.php'">戻る</button>
-    <button class="custom-button" onclick="location.href='admin_toroku_kanryo.php'">登録</button>
+    <div class="button-container">
+        <button class="custom-button" onclick="location.href='admin_toroku_input.php'">戻る</button>
+        <button class="custom-button" onclick="location.href='admin_toroku_kanryo.php'">登録</button>
+    </div>
 </body>
 
 </html>

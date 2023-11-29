@@ -9,9 +9,25 @@ td {
   padding: 8px;
   text-align: left;
 }
+p {
+  font-size: 18px;
+  padding-top: 30px;
+  text-align: center; /* ボタンを中央揃えにするためのスタイル */
+}
+.button-container {
+  text-align: center; /* ボタンを中央揃えにするためのスタイル */
+}
 .custom-button {
   background-color: black;
   color: white;
-  font-size: 16px;
-  /* 他にも必要なスタイルを追加 */
+  padding: 8px 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 23px; /* ボタン間の余白を設定 */
+}
+
+.custom-button:hover {
+  background-color: #000700;
 }
