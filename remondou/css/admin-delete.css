@@ -11,7 +11,6 @@ body {
 .container {
     margin: 20px;
     text-align: center;
-    /* Center content within the container */
 }
 
 h1 {
@@ -27,52 +26,57 @@ hr {
 table {
     width: 80%;
     margin: 0 auto;
-    /* Center the table within its container */
     border-collapse: collapse;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
+
 th,
 td {
-    border: 1px solid #ddd;
+    border: 1px solid #000500;
     padding: 8px;
     text-align: left;
 }
 
 th {
     background-color: #f2f2f2;
-    border: 1px solid #ddd;
+    border: 1px solid #000500;
 }
 
 form {
     margin-bottom: 20px;
 }
 
-/* 追加部分: ボタンのスタイル */
-input[type="button"],
-input[type="submit"] {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
+
+
+.center input[type="submit"]:hover,
+.center input[type="button"]:hover {
+    background-color: #000500;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+
+.center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.center input[type="submit"],
+.center input[type="button"] {
+    background-color: #000500;
+    color: white;
+    padding: 10px 50px;
     border: none;
     cursor: pointer;
-}
+    font-size: 18px;
+    margin: 35px;
 
-input[type="button"]:hover,
-input[type="submit"]:hover {
-    background-color: #333;
-}
-
-/* 追加部分: ボタンを横並びに配置 */
-.button-container {
-    text-align: center;
-}
-
-.button-container input[type="button"],
-.button-container input[type="submit"] {
-    display: inline-block;
-    margin: 10px 20px 10px 10px;
-    /* 右側の余白を増やす */
 }

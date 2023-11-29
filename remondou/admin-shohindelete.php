@@ -45,9 +45,11 @@ if ($row) {
 }
 ?>
 </table>
-上記の情報を削除しますか？<br>
 
+<p>上記の情報を削除しますか？</p>
 
+<div class="center">
 
-<input type="button" onclick="location.href='admin-shohinitiran.php'" value="戻る">
-<input type="button" onclick="location.href='admin-shohindeletekanyo.php?shohin_id=<?= $shohin_id ?>'" value="削除">
+    <input type="button" onclick="location.href='admin-shohinitiran.php'" value="戻る">
+    <input type="button" onclick="location.href='admin-shohindeletekanyo.php?shohin_id=<?= $shohin_id ?>'" value="削除">
+</div>
