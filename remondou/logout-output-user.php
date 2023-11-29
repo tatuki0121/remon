@@ -1,6 +1,5 @@
 <?php session_start();?>
 <?php require 'header.php'; ?>
-<?php require 'nav.php'; ?>
 <?php
 if(isset($_SESSION['user'])){
      unset($_SESSION['user']); 
