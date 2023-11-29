@@ -37,6 +37,4 @@ if(isset($_POST['send'])){
     echo '</form>';
 }
 ?>
-</body>
-</html>
 <?php require 'footer.php'; ?>
