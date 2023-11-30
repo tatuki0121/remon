@@ -1,8 +1,7 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<?php $css = 'admin-shohinitiran.css'; ?>
 <?php require 'admin-header.php'; ?>
-<link rel="stylesheet" href="css/admin-shohinitiran.css">
-
 
 <h1>商品一覧</h1>
 <hr>

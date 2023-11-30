@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<?php $css = 'shohindeletekanryo.css'; ?>
 <?php require 'admin-header.php'; ?>
-<link rel="stylesheet" href="css/admin-shohindeletekanryo.css">
 
 <h1>商品削除</h1>
 <hr>
