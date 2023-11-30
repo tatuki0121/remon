@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <h2>商品登</h2>
+    <h2>商品登録</h2>
     <hr>
     <div class="center">
         <form action="admin_toroku_output.php" method="post">
