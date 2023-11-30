@@ -60,13 +60,12 @@ if(!isset($_SESSION['user'])){
         }
     }
     // 存在してる場合→エラーメッセージ　画面はこのまま     ]
-    require 'header.php';
-    echo '<link rel="stylesheet" href="css/user-update.css">';
+    $css = 'user-update.css';
     require 'nav.php';
-    echo '<h1><div class="user_h1">';
+    echo '<h1><div class="title is-1">';
     echo 'ユーザー情報更新';
     echo '</div></h1>';
-    echo '<div class=".boxconf">';
+    echo '<div class="box">';
     echo '<table>';
     echo '<form action="user-update.php" method="post">';
     echo '<tr>';

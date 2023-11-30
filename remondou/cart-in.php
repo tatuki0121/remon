@@ -1,7 +1,6 @@
-<?php require 'header.php'; ?>
+<?php $css ='cart-in.css'; ?>
 <?php require 'nav.php'; ?>
 <?php
-echo '<link rel="stylesheet" href="css/cart-in.css">';
 if(!isset($_SESSION['item'])){
     $_SESSION['item']=[];
 }

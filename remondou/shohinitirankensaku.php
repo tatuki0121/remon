@@ -1,8 +1,7 @@
 <?php require 'db-connect.php'; ?>
-<?php require 'header.php'; ?>
+<?php $css = 'shohinitirankensaku.css'; ?>
 <?php require 'nav.php'; ?>
 <?php
-    echo '<link rel="stylesheet" href="css/shohinitirankensaku.css">';
     echo '<form action="shohinitirankensaku.php" method="post">';
     echo '<div id="kensaku">'; 
     echo '<input type="text" name="keyword">';

@@ -1,4 +1,5 @@
 <?php session_start();?>
+<?php $css = 'logout-output-user.css';?>
 <?php require 'header.php'; ?>
 <?php
 if(isset($_SESSION['user'])){
@@ -8,7 +9,6 @@ if(isset($_SESSION['user'])){
         echo'<p>すでにログアウトしています。</p>';
      }
      ?>
-<link rel="stylesheet" href="css/logout-output-user.css">
 <form action="login-1.php">
 <p><input type="submit" value="ログイン画面へ"></p>
 </form>

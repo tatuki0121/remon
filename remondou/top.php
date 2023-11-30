@@ -1,25 +1,22 @@
 <?php require 'db-connect.php'; ?>
-<?php require 'header.php'; ?>
-<?php require 'nav.php'; ?>
-
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <title>檸檬堂販売サイト</title>
+<?php $css = 'top.css'; ?>
+<?php $script = '
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <link rel="stylesheet" href="css/top.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('.slider').bxSlider({
+            $(\'.slider\').bxSlider({
                 auto: true,
                 pause: 5000,
             });
         });
     </script>
+    ';
+?>
+<?php require 'nav.php'; ?>
+
+
 </head>
 
 <body>

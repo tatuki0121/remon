@@ -1,9 +1,8 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php require 'header.php'; ?>
+<?php $css = 'shohinsyosai.css'; ?>
 <?php require 'nav.php'; ?>
 <?php
-echo '<link rel="stylesheet" href="css/shohinsyosai.css">';
 $pdo=new PDO($connect, USER, PASS);
 $sql=$pdo->prepare('select * from shohin where shohin_id=?');
 $sql->execute([$_GET['id']]);
