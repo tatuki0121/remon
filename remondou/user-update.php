@@ -62,7 +62,7 @@ if(!isset($_SESSION['user'])){
     // 存在してる場合→エラーメッセージ　画面はこのまま     ]
     $css = 'user-update.css';
     require 'nav.php';
-    echo '<h1><div class="title is-1">';
+    echo '<h1><div class="title is-4">';
     echo 'ユーザー情報更新';
     echo '</div></h1>';
     echo '<div class="box">';
@@ -77,7 +77,7 @@ if(!isset($_SESSION['user'])){
     echo '</table>';
     echo '</div>';
     echo '<p class="error">',$emasagge,'</p>';
-    echo '<p class="button"><input type="submit" value="登録" name="send"></p>';
+    echo '<div id="button"><input type="submit" value="登録" name="send"></div>';
     echo '</form>';
 }
 ?>
