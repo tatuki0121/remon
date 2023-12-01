@@ -3,8 +3,8 @@ h1{
 }
 .box{
     display: block;
-    height: 145px;
-    width: 350px;
+    height: 185px;
+    width: 500px;
     text-align: center;
     background-color: #dcdcdc;
     padding: 0.5em 1em;
@@ -18,8 +18,15 @@ table{
     margin-bottom: 50px;
 }
 
-.error{
-    color: red;
+#button{
+    text-align: center;
+}
+
+#button input{
+    margin: 50px;
+}
+
+#p1{
     text-align: center;
 }
 tr{

@@ -16,8 +16,8 @@ if(isset($_POST['send'])){
 }else{
     $css = 'user-update.css';
     require 'nav.php';
-    echo '<h1>ユーザー情報更新確認</h1>';
-    echo '<div class="boxconf">';
+    echo '<h1><div class="title is-4 mt-6 mb-6">ユーザー情報更新確認</h1></div>';
+    echo '<div class="box">';
     echo '<table>';
     echo '<form action="user-update-d.php" method="post">';
     echo '<tr>';
@@ -28,9 +28,13 @@ if(isset($_POST['send'])){
     echo '</tr>';
     echo '</table>';
     echo '</div>';
-    echo '<p class="message">上記情報を登録してよろしいですか？</p>';
+    echo '<div class="columns is-mobile is-centered">';
+    echo '<p class="mt-3">上記情報を登録してよろしいですか？</p>';
+    echo '</div>';
+    echo '<div id="button">';
     echo '<input type="submit" value="戻る" name="return">';
-    echo '<input type="submit" value="登録" name="send">';
+    echo '<input class="ml-6 mt-3" type="submit" value="登録" name="send">';
+    echo '</div>';
     echo '</form>';
 }
 ?>
