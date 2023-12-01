@@ -17,7 +17,7 @@
 
 <body>
     <div id="app" class="has-background-black">
-        <div class="tabs is-left">
+        <div class="tabs is-right">
             <ul>
                 <li v-for="(item, i) in menus" :key="i" class="" class="menu-item"><a :href="item.path"><i :class="item.icon"></i>{{ item.label }}</a></li>
             </ul>
