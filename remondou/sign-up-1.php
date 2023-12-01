@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<?php $css= 'sign-up-1.css'; ?>
 <?php
 $emasagge='';
 if(isset($_POST['send'])){
@@ -31,24 +32,44 @@ if(isset($_POST['send'])){
             $emasagge = '入力されたメールアドレスは既に使用されています。';
         }
          // 存在してる場合→エラーメッセージ　画面はこのまま     ]
+        
         require 'header.php';
-        echo '新規ユーザー登録';
+        echo '<h1>新規ユーザー登録</h1>';
+        echo '<div class="box">';
+        echo '<table>'; 
         echo '<form action="sign-up-1.php" method="post">';
-        echo '<p>メールアドレス<input type="text" name="mail" value="',$_POST['mail'],'"></p>';
-        echo '<p>パスワード<input type="text" name="pass" value="',$_POST['pass'],'"></p>';
-        echo $emasagge;
-        echo '<br>';
+        echo '<tr>';
+        echo '<th>メールアドレス</th><td><input type="text" name="mail" value="',$_POST['mail'],'"></td>';
+        echo '</tr>';
+        echo '<tr>';
+        echo '<th>パスワード</th><td><input type="text" name="pass" value="',$_POST['pass'],'"></td>';
+        echo '</tr>';
+        echo '</table>';
+        echo '</div>';
+        echo '<p class="error">', $emasagge, '</p>';
+        echo '<div id="button">';
         echo '<input type="submit" value="登録" name="send">';
-        echo '</form>';
+        echo '</div>';
     }
 }else{
     // 存在してる場合→エラーメッセージ　画面はこのまま     ]
+
     require 'header.php';
-    echo '新規ユーザー登録';
+    echo '<h1>新規ユーザー登録</h1>';
+    echo '<div class="box">';
+    echo '<table>';
     echo '<form action="sign-up-1.php" method="post">';
-    echo '<p>メールアドレス<input type="text" name="mail"></p>';
-    echo '<p>パスワード<input type="password" name="pass"></p>';
+    echo '<tr>';
+    echo '<th>メールアドレス</th><td><input type="text" name="mail"></td>';
+    echo '</tr>';
+    echo '<tr>';
+    echo '<th>パスワード</th><td><input type="password" name="pass"></td>';
+    echo '</tr>';
+    echo '</table>';
+    echo '</div>';
+    echo '<div id="button">';
     echo '<input type="submit" value="登録" name="send">';
+    echo '</div>';
     echo '</form>';
 }
 /*if($error['mail'] == 'blank'){

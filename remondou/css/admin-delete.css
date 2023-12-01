@@ -1,3 +1,5 @@
+/* admin-delete.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,17 +21,16 @@ hr {
     border: 1px solid #dcdcdc;
     margin-top: 10px;
     margin-bottom: 20px;
-    /* Adjusted margin to match the second code */
 }
 
 table {
     width: 80%;
-    /* Adjusted width to match the second code */
     margin: 0 auto;
     border-collapse: collapse;
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
 
 th,
 td {
@@ -49,38 +50,33 @@ form {
 
 
 
-form[action="admin-top.php"] {
-    margin-top: 20px;
+.center input[type="submit"]:hover,
+.center input[type="button"]:hover {
+    background-color: #000500;
 }
 
-form {
-    margin-bottom: 20px;
+p {
+    font-size: 20px;
     text-align: center;
+    padding-top: 40px;
 }
 
-input[type="submit"] {
-    background-color: #000;
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 18px;
+
+.center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.center input[type="submit"],
+.center input[type="button"] {
+    background-color: #000500;
+    color: white;
+    padding: 10px 50px;
     border: none;
     cursor: pointer;
-    display: inline-block;
-}
+    font-size: 18px;
+    margin: 35px;
 
-input[type="submit"]:hover {
-    background-color: #333;
-}
-
-input[name="del"] {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ddd;
-    padding: 8px 15px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-input[name="del"]:hover {
-    background-color: #ddd;
 }

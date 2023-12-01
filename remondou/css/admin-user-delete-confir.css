@@ -26,12 +26,15 @@ table {
     margin-top: 10px;
     margin-bottom: 20px;
     border: 2px solid #333;
+    /* 枠線を太く */
 }
 
 th,
 td {
     border: 2px solid #333;
+    /* 枠線を太く */
     padding: 15px;
+    /* パディングを大きく */
     text-align: left;
 }
 
@@ -46,14 +49,15 @@ form {
 
 p {
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 30px;
+    /* 中央に配置 */
+    margin-bottom: 20px;
+    /* 下の余白を追加 */
 }
 
 input[type="submit"] {
     background-color: #000;
     color: #fff;
-    padding: 10px 50px;
+    padding: 20px 30px;
     /* ボタンサイズを大きく */
     font-size: 18px;
     /* 文字を大きく */

@@ -1,8 +1,8 @@
-<?php session_start();?>
-<?php require 'db-connect.php';?>
-<?php require 'admin-header.php';?>
-
 <?php
+session_start();
+require 'db-connect.php';
+require 'admin-header.php';
+
 // セッション変数からデータを取得
 $name = $_SESSION['name'];
 $capa = $_SESSION['capa'];
@@ -27,12 +27,11 @@ $stmt->execute([$name, $exp, $capa, $dosu, $price, $suryo, $img, $shohin_id]);
 <?php
 if ($stmt->rowCount() > 0) {
     // 登録が成功した場合のメッセージを表示
-    echo "<p>商品更新が完了しました</p>";
+    echo "商品更新が完了しました";
 } else {
-    echo "<p>商品更新に失敗しました</p>";
+    echo "商品更新に失敗しました。";
 }
 ?>
-<link rel="stylesheet" href="css/admin-update-kanryo.css">
 <form action="admin-shohinitiran.php" method="post">
-    <p><input type="submit" name="admin-shohinitiran.php" value="商品一覧に戻る"></p>
+    <input type="submit" name="admin-shohinitiran.php" value="商品一覧に戻る">
 </form>
