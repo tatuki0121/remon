@@ -16,8 +16,8 @@ if(isset($_POST['send'])){
 }else{
     $css = 'user-update.css';
     require 'nav.php';
-    echo '<h1><div class="title is-4">ユーザー情報更新確認</h1></div>';
-    echo '<div class="box">';
+    echo '<h1>ユーザー情報更新確認</h1>';
+    echo '<div class="boxconf">';
     echo '<table>';
     echo '<form action="user-update-d.php" method="post">';
     echo '<tr>';

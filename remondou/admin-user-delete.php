@@ -1,9 +1,10 @@
 <?php session_start(); ?>
 <?php
 if (isset($_SESSION['admin']) ) {
-    require 'db-connect.php'; 
-    $css = 'admin-delete.css'; 
+    require 'db-connect.php';
+    $css = 'admin-delete.css';
     require 'admin-header.php';
+    
     $pdo = new PDO($connect, USER, PASS);
     $user_id='';
 
