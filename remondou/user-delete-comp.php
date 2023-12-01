@@ -21,6 +21,7 @@ if (isset($_SESSION['admin']) ) {
     //ユーザーの削除命令文（ユーザー表）
     $sql = $pdo->prepare('delete from user where user_id=?');
     $sql->execute([$user_id]);
+
     require 'admin-header.php';
     echo '<body>';
     echo '<h1>ユーザー一覧</h1>';
