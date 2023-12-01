@@ -24,18 +24,23 @@
     echo '<td>', $_POST['img'], '</td>';
     echo '<td>', $_POST['exp'], '</td>';
     echo '</tr>';
-    $_SESSION['id'] = $_POST['shohin_id'];
-    $_SESSION['name'] = $_POST['name'];
-    $_SESSION['capa'] = $_POST['capa'];
-    $_SESSION['dosu'] = $_POST['dosu'];
-    $_SESSION['price'] = $_POST['price'];
-    $_SESSION['suryo'] = $_POST['suryo'];
-    $_SESSION['img'] = $_POST['img'];
-    $_SESSION['exp'] = $_POST['exp'];
+    $_SESSION['shohin']=[];
+    $_SESSION['shohin']['id'] = $_POST['shohin_id'];
+    $_SESSION['shohin']['name'] = $_POST['name'];
+    $_SESSION['shohin']['capa'] = $_POST['capa'];
+    $_SESSION['shohin']['dosu'] = $_POST['dosu'];
+    $_SESSION['shohin']['price'] = $_POST['price'];
+    $_SESSION['shohin']['suryo'] = $_POST['suryo'];
+    $_SESSION['shohin']['img'] = $_POST['img'];
+    $_SESSION['shohin']['exp'] = $_POST['exp'];
     ?>
 </table>
 <p>上記情報を更新しますか？</p>
-<button onclick="location.href='admin-shohinkousin.php'">戻る</button>
+<form action="admin-shohinkousin" method="post">
+<input type="hidden" name="shohin_id" value="<?= $_POST['shohin_id'] ?>">
+<button type="submit">戻る</button>
+</form>
+
 <button onclick="location.href='admin-update-kanryo.php'">更新</button>
 </body>
 
