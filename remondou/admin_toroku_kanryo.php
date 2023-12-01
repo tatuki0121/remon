@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php require 'admin-header.php';
-
+<?php require 'admin-header.php';?>
+<?php
 
 // セッション変数からデータを取得
 $name = $_SESSION['name'];
@@ -25,11 +25,12 @@ $stmt->execute([$name, $exp, $capa, $dosu, $price, $suryo, $img]);
 <?php
 if ($stmt->rowCount() > 0) {
     // 登録が成功した場合のメッセージを表示
-    echo "商品登録が完了しました";
+    echo "<p>商品登録が完了しました</p>";
 } else {
-    echo "商品登録に失敗しました。";
+    echo "<p>商品登録に失敗しました。</p>";
 }
 ?>
+<link rel="stylesheet" href="css/admin_toroku_kanryo.css">
 <form action="admin-shohinitiran.php" method="post">
-    <input type="submit" name="admin-shohinitiran.php" value="商品一覧に戻る">
+    <p><input type="submit" name="admin-shohinitiran.php" value="商品一覧に戻る"></p>
 </form>
