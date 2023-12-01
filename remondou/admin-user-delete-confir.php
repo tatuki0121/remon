@@ -39,10 +39,11 @@ if(isset($_POST['return'])){
         $_SESSION['u_delete'] =[
             'user_id'=>$row['user_id']
         ]; 
+        $user_id = $_SESSION['u_delete'];
     }
     echo '</table>';
 
-    echo '上記の情報を削除しますか？';
+    echo '<p>上記の情報を削除しますか？</p>';
     
     echo '<td><form action="admin-user-delete-confir.php" method="post">';
     echo '<input type="hidden" name="user_id" value="',$user_id,'">';
