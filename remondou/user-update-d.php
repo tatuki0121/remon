@@ -14,8 +14,7 @@ if(isset($_POST['send'])){
 }else if(isset($_POST['return'])){
     header('Location: user-update.php');
 }else{
-    require 'header.php';
-    echo '<link rel="stylesheet" href="css/user-update.css">';
+    $css = 'user-update.css';
     require 'nav.php';
     echo '<h1>ユーザー情報更新確認</h1>';
     echo '<div class="boxconf">';

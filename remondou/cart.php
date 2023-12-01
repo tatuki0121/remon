@@ -1,9 +1,8 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php require 'header.php'; ?>
+<?php $css ='cart.css'; ?>
 <?php require 'nav.php'; ?>
 <?php
-echo '<link rel="stylesheet" href="css/cart.css">';
 $pdo=new PDO($connect, USER, PASS);
 if(!empty($_SESSION['item'])){
     if(!empty($_SESSION['item'])){

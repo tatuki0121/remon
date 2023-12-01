@@ -1,6 +1,5 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php require 'admin-header.php'; ?>
 <?php
 if (isset($_SESSION['admin']) ) {
     $user_id=$_SESSION['u_delete']['user_id'];
@@ -23,6 +22,7 @@ if (isset($_SESSION['admin']) ) {
     $sql = $pdo->prepare('delete from user where user_id=?');
     $sql->execute([$user_id]);
 
+    require 'admin-header.php';
     echo '<body>';
     echo '<h1>ユーザー一覧</h1>';
     echo '<hr>';
