@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php $css = 'admin-delete.css'; ?>
+<?php $css = 'admin-shohindeletekakunin.css'; ?>
 <?php require 'admin-header.php'; ?>
 
 <h1>商品削除</h1>
