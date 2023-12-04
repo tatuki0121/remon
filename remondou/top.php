@@ -26,17 +26,16 @@
         <img src="image/shioremon.jpeg" width="400" height="350" alt="">
     </div>
     <h2 class="title is-4 mt-6">製品情報</h2>
-    <ul>
-        <li><img src="image/remondo.jpeg" width="300" height="150" alt=""></li>
-        <li><img src="image/hachimitu.jpeg" width="300" height="150" alt=""></li>
-        <li><img src="image/shioremon.jpeg" width="300" height="150" alt=""></li>
+    <ul class="seihin-image">>
+        <li><img src="image/3.jpeg" width="300" height="150" alt=""></li>
+        <li><img src="image/5.jpeg" width="300" height="150" alt=""></li>
+        <li><img src="image/7.jpeg" width="300" height="150" alt=""></li>
+        <li><img src="image/9.jpeg" width="300" height="150" alt=""></li>
     </ul>
-
     <h2 class="title is-4">こだわり</h2>
-
     <div class="exp">これが、イマドキのレモンサワー。</div>
     <div class="exp">お家で楽しめる、こだわりのおいしさ。</div>
-    <p><img src="test.img/test1.jpg" width="350" height="250" alt=""></p>
+    <p class="custom-image"><img src="image/ninki.jpeg" width="350" height="250" alt=""></p>
     <div class="exp">～画像説明～</div>
     <p>
     <h2>ムービー</h2>
