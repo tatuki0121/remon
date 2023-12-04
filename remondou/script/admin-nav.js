@@ -4,7 +4,7 @@ new Vue({
         return{
             menus: [{
                 label: 'ログアウト',
-                path: './logout-input-adomin.php'
+                path: './logout-input-admin.php'
             }]
         };
     }
