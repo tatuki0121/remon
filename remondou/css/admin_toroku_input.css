@@ -34,3 +34,7 @@
   font-size: 30px;
   font-weight: bold;
 }
+.select-container {
+  margin-bottom: 19px; /* 下の余白 */
+  margin-right: 165px; /* 左の余白 */
+}
