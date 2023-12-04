@@ -46,23 +46,23 @@
 
 
     <script>
-            function validateForm() {
-                var capa = document.getElementById("capa").value;
-                var dosu = document.getElementById("dosu").value;
-                var price = document.getElementById("price").value;
-                var suryo = document.getElementById("suryo").value;
-
-                // capa、price、suryoが負でないか確認
-                if (capa < 0 || price < 0 || suryo < 0) {
-                    alert("内容量、価格、在庫数量は負の値を設定できません。");
-                    return false;
-                }
-
-                // 必要に応じて他のバリデーションロジックを追加
-
-                // すべてのバリデーションが成功した場合、フォームの送信を許可するためにtrueを返す
-                return true;
-            }
+           function validateForm() {
+    var capa = document.getElementById("capa").value;
+    var dosu = document.getElementById("dosu").value;
+    var price = document.getElementsByName("price")[0].value; // "price" の要素を取得する際に注意
+    var suryo = document.getElementsByName("suryo")[0].value; // "suryo" の要素を取得する際に注意
+ 
+    // capa、price、suryoが負でないか確認
+    if (capa < 0 || price < 0 || suryo < 0) {
+        alert("内容量、価格、在庫数量は負の値を設定できません。");
+        return false;
+    }
+ 
+    // 必要に応じて他のバリデーションロジックを追加
+ 
+    // すべてのバリデーションが成功した場合、フォームの送信を許可するためにtrueを返す
+    return true;
+}
         </script>
 
 </div>
