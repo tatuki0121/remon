@@ -1,12 +1,12 @@
 ul {
   display: flex;
   justify-content: center;
-  padding: 0; /* <ul> 要素の内部余白をリセット */
-  list-style: none; /* リストのデフォルトスタイルを無効にする */
+  padding: 0; /* <ul> è¦ç´ ã®å†…éƒ¨ä½™ç™½ã‚’ãƒªã‚»ãƒƒãƒˆ */
+  list-style: none; /* ãƒªã‚¹ãƒˆã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚¹ã‚¿ã‚¤ãƒ«ã‚’ç„¡åŠ¹ã«ã™ã‚‹ */
 }
 
 ul li {
-  margin: 0 10px; /* 画像の間に10pxの左右の余白を追加 */
+  margin: 0 10px; /* ç”»åƒã®é–“ã«10pxã®å·¦å³ã®ä½™ç™½ã‚’è¿½åŠ  */
 }
 .slider {
   width: 50%;
@@ -16,10 +16,10 @@ ul li {
 .bx-wrapper {
   width: 1000px;
   height: 460px;
-  margin: 0 auto; /* 左右のマージンを自動で均等にすることで中央に配置 */
+  margin: 0 auto; /* å·¦å³ã®ãƒžãƒ¼ã‚¸ãƒ³ã‚’è‡ªå‹•ã§å‡ç­‰ã«ã™ã‚‹ã“ã¨ã§ä¸­å¤®ã«é…ç½® */
 }
 p {
-  text-align: center; /* テキストを中央に配置 */
+  text-align: center; /* ãƒ†ã‚­ã‚¹ãƒˆã‚’ä¸­å¤®ã«é…ç½® */
   margin-top: 10px;
 }
 h2 {
@@ -29,10 +29,20 @@ h2 {
   margin-top: 150px;
 }
 .exp {
-  text-align: center; /* テキストを中央に配置 */
+  text-align: center; /* ãƒ†ã‚­ã‚¹ãƒˆã‚’ä¸­å¤®ã«é…ç½® */
   margin-top: 5px;
 }
 img {
-  height: 440px;
-  width: 350px;
+  height: 490px;
+  width: 400px;
+}
+.custom-image img {
+  height: 500px;
+  width: 450px;
+}
+
+.seihin-image img {
+  height: 350px;
+  width: 300px;
+  margin-bottom: 30px;
 }
