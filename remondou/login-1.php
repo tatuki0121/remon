@@ -54,7 +54,7 @@ if(isset($_POST['but'])){
     echo '</form>';
     echo '<p class="p2">まだ会員登録されていない方</p>';
     echo '<form action="sign-up-1.php" method="post">';
-    echo '<p class="button"><input type="submit" value="新規会員登録">';
+    echo '<p class="button"><input type="submit" value="新規会員登録"></p>';
     echo '</form>';
 }else{
     require 'header.php';
@@ -76,7 +76,7 @@ if(isset($_POST['but'])){
     echo '</form>';
     echo '<p class="p2">まだ会員登録されていない方</p>';
     echo '<form action="sign-up-1.php" method="post">';
-    echo '<p class="button"><input type="submit" value="新規会員登録">';
+    echo '<p class="button"><input type="submit" value="新規会員登録"></p>';
     echo '</form>';
 }
 ?>
