@@ -65,7 +65,7 @@ if(!isset($_SESSION['user'])){
     echo '<h1><div class="title is-4 mt-6 mb-6">';
     echo 'ユーザー情報更新';
     echo '</div></h1>';
-    echo '<div class="box">';
+    echo '<div id="box" class="has-background-grey-lighter pt-1 pb-1 is-harfwidth">';
     echo '<table class="mt-6">';
     echo '<form action="user-update.php" method="post">';
     echo '<tr>';
@@ -77,7 +77,7 @@ if(!isset($_SESSION['user'])){
     echo '</table>';
     echo '</div>';
     echo '<div class="columns is-mobile is-centered">';
-    echo '<p class="error has-text-danger is-centered">',$emasagge,'</p>';
+    echo '<p class="error has-text-danger is-centered mt-4">',$emasagge,'</p>';
     echo '</div>';
     echo '<div id="button"><input type="submit" value="登録" name="send"></div>';
     echo '</form>';

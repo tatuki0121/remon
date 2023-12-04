@@ -17,10 +17,10 @@ if(isset($_POST['send'])){
     $css = 'user-update.css';
     require 'nav.php';
     echo '<h1><div class="title is-4 mt-6 mb-6">ユーザー情報更新確認</h1></div>';
-    echo '<div class="box">';
+    echo '<div id="box">';
     echo '<table class="mt-6">';
     echo '<form action="user-update-d.php" method="post">';
-    echo '<tr>';
+    echo '<tpppppr>';
     echo '<th>メールアドレス</th><td><input type="text" name="mail" value="',$_SESSION['ruser']['rmail'],'" readonly></td>';
     echo '</tr>';
     echo '<tr>';

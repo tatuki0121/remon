@@ -1,7 +1,4 @@
-h1{
-    text-align: center;
-}
-.box{
+#box{
     display: block;
     height: 185px;
     width: 500px;
@@ -12,10 +9,13 @@ h1{
     font-weight: bold;
     border: solid 3px #dcdcdc;
 }
+h1{
+    text-align: center;
+}
 table{
     width: 300px;
     margin: 20px auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 #button{
@@ -23,7 +23,15 @@ table{
 }
 
 #button input{
-    margin: 50px;
+    margin: 10px;
+}
+
+#button2{
+    text-align: center;
+}
+
+#button2 input{
+    margin-top: 100px;
 }
 
 #p1{
@@ -39,7 +47,4 @@ input[type="submit"] {
     font-size: 16px;
     border: none;
     cursor: pointer;
-}
-#button{
-    text-align: center;
 }
