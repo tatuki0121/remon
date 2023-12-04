@@ -35,7 +35,7 @@ if(isset($_POST['but'])){
             }
         }
     }
-    echo '<link rel="stylesheet" href="css/admin-login.css">';
+    require 'admin-login-header.php';
     echo '<h1>ログイン</h1>';
     echo '<div class="box">';
     echo '<table>';
@@ -52,7 +52,7 @@ if(isset($_POST['but'])){
     echo '<p><input type="submit" name="but" value="ログイン"></p>';
     echo '</form>';
 }else{
-    echo '<link rel="stylesheet" href="css/admin-login.css">';
+    require 'admin-login-header.php';
     echo '<h1>ログイン</h1>';
     echo '<div class="box">';
     echo '<table>';
