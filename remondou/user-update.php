@@ -66,7 +66,7 @@ if(!isset($_SESSION['user'])){
     echo 'ユーザー情報更新';
     echo '</div></h1>';
     echo '<div class="box">';
-    echo '<table>';
+    echo '<table class="mt-6">';
     echo '<form action="user-update.php" method="post">';
     echo '<tr>';
     echo '<th>メールアドレス</th><td><input type="text" name="mail" value="',$mail,'"></td>';
@@ -76,7 +76,9 @@ if(!isset($_SESSION['user'])){
     echo '</tr>';
     echo '</table>';
     echo '</div>';
-    echo '<p class="error mb-4">',$emasagge,'</p>';
+    echo '<div class="columns is-mobile is-centered">';
+    echo '<p class="error has-text-danger is-centered">',$emasagge,'</p>';
+    echo '</div>';
     echo '<div id="button"><input type="submit" value="登録" name="send"></div>';
     echo '</form>';
 }
