@@ -35,24 +35,26 @@ input[type="submit"]:hover {
     background-color: #333;
 }
 
+
 table {
-    width: 100%;
+    width: 80%;
+    /* Adjusted width to match the second code */
+    margin: 0 auto;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 th,
 td {
-    border: 2px solid #ddd;
-    /* Increase border width for better visibility */
+    border: 1px solid #000500;
     padding: 8px;
     text-align: left;
 }
 
 th {
     background-color: #f2f2f2;
-    border: 2px solid #ddd;
-    /* Also add border to header cells for consistency */
+    border: 1px solid #000500;
 }
 
 
