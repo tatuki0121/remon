@@ -9,7 +9,13 @@ if(isset($_POST['send'])){
     $sql2 = $pdo->prepare("select * from user where mail=?");
     $sql2->execute([$_POST['mail']]);
     $data2 = $sql2->fetchAll();
-    if(empty($data2) && ($_POST['mail'] != '' && strlen($_POST['pass']) > 5)){
+    $check;
+    if (preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $_POST['mail'])) {
+        $check=true;
+    } else {
+        $check=false;
+    }
+    if(empty($data2) && ($check === true && strlen($_POST['pass']) > 5)){
         // 存在しない場合、セッションに登録して確認画面へ遷移 header(location)
         $_SESSION['suser']=[
             'mail' => $_POST['mail'],'pass' => $_POST['pass']
@@ -21,6 +27,8 @@ if(isset($_POST['send'])){
         if($_POST['mail'] == ''){
             //メールアドレスが空の場合
             $emasagge = 'メールアドレスを入力してください。';
+        }else if($check === false){
+            $emasagge = 'メールアドレスは正しい形式で入力してください。';
         }else if($_POST['pass'] == '' && isset($_POST['mail'])){
             //パスワードが空の場合
             $emasagge = 'パスワードを入力してください。';
