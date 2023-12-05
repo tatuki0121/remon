@@ -10,6 +10,7 @@ if(isset($_POST['send'])){
     $sql2->execute([$_POST['mail']]);
     $data2 = $sql2->fetchAll();
     $check;
+    //メールアドレスの形式確認
     if (preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $_POST['mail'])) {
         $check=true;
     } else {
@@ -27,11 +28,12 @@ if(isset($_POST['send'])){
         if($_POST['mail'] == ''){
             //メールアドレスが空の場合
             $emasagge = 'メールアドレスを入力してください。';
-        }else if($check === false){
-            $emasagge = 'メールアドレスは正しい形式で入力してください。';
         }else if($_POST['pass'] == '' && isset($_POST['mail'])){
             //パスワードが空の場合
             $emasagge = 'パスワードを入力してください。';
+        }else if($check === false){
+            //正しいメールアドレスの形式ではなかった場合
+            $emasagge = 'メールアドレスは正しい形式で入力してください。';
         }else if(strlen($_POST['pass']) < 6 && isset($_POST['mail'])){
             //パスワードが6文字未満の場合
             $emasagge = 'パスワードは６文字以上に設定してください。';
