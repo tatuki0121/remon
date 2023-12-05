@@ -41,6 +41,7 @@ if(!isset($_SESSION['user'])){
                 header('Location: user-update-d.php');
                 exit();
             }else{
+                $_POST['mail'];
                 $ifdata = password_verify($_POST['pass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT));
                 if($mail == $_SESSION['user']['mail'] &&  $ifdata == true){
                     //ユーザー情報が更新されていなかった場合
