@@ -26,12 +26,13 @@ $stmt->execute([$name, $exp, $capa, $dosu, $price, $suryo, $img, $shohin_id]);
 <?php
 if ($stmt->rowCount() > 0) {
     
-    echo "商品更新が完了しました";
+    echo "<p>商品更新が完了しました</p>";
 } else {
-    echo "商品更新に失敗しました。";
+    echo "<p>商品更新に失敗しました。</p>";
 }
 unset($_SESSION['shohin']);
 ?>
+<link rel="stylesheet" href="css/admin-update-kanryo.css">
 <form action="admin-shohinitiran.php" method="post">
-    <input type="submit" name="admin-shohinitiran.php" value="商品一覧に戻る">
+    <p><input type="submit" name="admin-shohinitiran.php" value="商品一覧に戻る"></p>
 </form>
