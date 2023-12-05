@@ -28,9 +28,12 @@
         <p>価格：<input type="number" name="price" id="price" required></p>
         <p>在庫数量：<input type="number" name="suryo" id="suryo" required></p>
         <p>商品画像：<input type="file" name="img" required></p>
-        <p>商品説明：<textarea name="exp" required></textarea></p>
-        <input type="button" onclick="location.href='admin-shohinitiran.php'" value="戻る">
-        <input type="submit" value="登録">
+        商品説明：
+        <textarea name="exp" style="width: 40%;" rows="2" required></textarea>
+        <p>
+            <input type="button" onclick="location.href='admin-shohinitiran.php'" value="戻る">
+            <input type="submit" value="登録">
+        </p>
     </form>
 
 
