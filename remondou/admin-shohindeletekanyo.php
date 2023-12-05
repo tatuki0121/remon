@@ -3,6 +3,7 @@
 <?php $css = 'shohindeletekanryo.css'; ?>
 <?php require 'admin-header.php'; ?>
 
+
 <h1>商品削除</h1>
 <hr>
 

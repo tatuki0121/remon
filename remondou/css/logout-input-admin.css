@@ -14,7 +14,7 @@ body {
 
 .centered-image {
     display: block;
-    margin: 20px auto; /* マージン調整 */
+    margin: 20px auto; /* ãƒžãƒ¼ã‚¸ãƒ³èª¿æ•´ */
 }
 
 .logout {
@@ -32,4 +32,18 @@ body {
 .form form {
     display: inline-block;
     margin: 0 10px;
+}
+
+input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
 }

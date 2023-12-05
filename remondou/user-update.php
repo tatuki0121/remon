@@ -5,7 +5,6 @@ $emasagge='';
 if(!isset($_SESSION['user'])){
     echo 'ログインしていません。ログインしてください';
 }else{
-    $check;
     $id=$_SESSION['user']['user_id'];
     $mail=$_SESSION['user']['mail'];
     $pass=$_SESSION['user']['pass'];
@@ -13,12 +12,13 @@ if(!isset($_SESSION['user'])){
         // DB問合せ
         $pdo = new PDO($connect,USER,PASS);
         $sql1 = $pdo->prepare("select * from user where mail=?");
-
+        
         $sql1->execute([$_POST['mail']]);
-
+        
         $data1 = $sql1->fetchAll();
-
+        
         $check;
+        $ifdata = password_verify($_POST['pass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT));
         //メールアドレスの形式確認
         if (preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $_POST['mail'])) {
             $check=true;
@@ -32,8 +32,7 @@ if(!isset($_SESSION['user'])){
             $pass = $row['pass'];
         }
         if($check === true && strlen($_POST['pass']) > 5){
-            if(empty($data1) || ($mail == $_SESSION['user']['mail'] && 
-                password_verify($_POST['pass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT)) == false)){
+            if(empty($data1) || ($mail == $_SESSION['user']['mail'] && $ifdata == false)){
                     // 存在しない場合、セッションに再登録して確認画面へ遷移 header(location)
                 $_SESSION['ruser']=[
                     'rmail' => $_POST['mail'],'rpass' => $_POST['pass'],
@@ -41,7 +40,6 @@ if(!isset($_SESSION['user'])){
                 header('Location: user-update-d.php');
                 exit();
             }else{
-                $ifdata = password_verify($_POST['pass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT));
                 if($mail == $_SESSION['user']['mail'] &&  $ifdata == true){
                     //ユーザー情報が更新されていなかった場合
                     $emasagge = '情報を変更してください。';
@@ -94,5 +92,6 @@ if(!isset($_SESSION['user'])){
     echo '<div id="button"><input type="submit" value="登録" name="send"></div>';
     echo '</form>';
 }
+//password_verify($_POST['pass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT))
 ?>
 <?php require 'footer.php'; ?>
