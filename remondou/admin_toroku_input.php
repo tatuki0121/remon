@@ -1,12 +1,19 @@
 <?php require 'db-connect.php'; ?>
 <?php $css = 'admin_toroku_input.css'; ?>
 <?php require 'admin-header.php'; ?>
-<div class="h2">商品登録</div>
+<div class="h1">商品登録</div>
 <hr>
 <div class="center">
     <form action="admin_toroku_output.php" method="post" onsubmit="return validateForm()">
         <p>商品名：<input type="text" name="name" required></p>
-        <p>内容量：<input type="number" name="capa" id="capa" required></p>
+        <div class="select-container">
+            内容量：
+            <select name="capa" id="capa" required>
+                <option value="300">300</option>
+                <option value="350">350</option>
+                <option value="500">500</option>
+            </select>
+        </div>
         <div class="select-container"> <!-- 新しく追加したdiv -->
             度数：
             <select name="dosu" id="dosu" required>

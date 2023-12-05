@@ -3,6 +3,8 @@
 <?php $css= 'sign-up-1.css'; ?>
 <?php
 $emasagge='';
+$mail='';
+$pass='';
 if(isset($_POST['send'])){
     // DB問合せ
     $pdo = new PDO($connect,USER,PASS);
@@ -16,6 +18,7 @@ if(isset($_POST['send'])){
     } else {
         $check=false;
     }
+
     if(empty($data2) && ($check === true && strlen($_POST['pass']) > 5)){
         // 存在しない場合、セッションに登録して確認画面へ遷移 header(location)
         $_SESSION['suser']=[
@@ -24,6 +27,8 @@ if(isset($_POST['send'])){
         header('Location: sign-up-2.php');
         exit();
     }else{
+        // 存在する場合、エラーメッセージを表示、画面はそのまま
+
         //エラー項目の確認
         if($_POST['mail'] == ''){
             //メールアドレスが空の場合
@@ -41,54 +46,30 @@ if(isset($_POST['send'])){
             //メールアドレスが既に使用されていた場合
             $emasagge = '入力されたメールアドレスは既に使用されています。';
         }
-         // 存在してる場合→エラーメッセージ　画面はこのまま     ]
-        
-        require 'header.php';
-        echo '<h1>新規ユーザー登録</h1>';
-        echo '<div class="box">';
-        echo '<table>'; 
-        echo '<form action="sign-up-1.php" method="post">';
-        echo '<tr>';
-        echo '<th>メールアドレス</th><td><input type="text" name="mail" value="',$_POST['mail'],'"></td>';
-        echo '</tr>';
-        echo '<tr>';
-        echo '<th>パスワード</th><td><input type="text" name="pass" value="',$_POST['pass'],'"></td>';
-        echo '</tr>';
-        echo '</table>';
-        echo '</div>';
-        echo '<p class="error">', $emasagge, '</p>';
-        echo '<div id="button">';
-        echo '<input type="submit" value="登録" name="send">';
-        echo '</div>';
+        $mail=$_POST['mail'];
+        $pass=$_POST['pass'];
     }
-}else{
-    // 存在してる場合→エラーメッセージ　画面はこのまま     ]
-
-    require 'header.php';
-    echo '<h1>新規ユーザー登録</h1>';
-    echo '<div class="box">';
-    echo '<table>';
-    echo '<form action="sign-up-1.php" method="post">';
-    echo '<tr>';
-    echo '<th>メールアドレス</th><td><input type="text" name="mail"></td>';
-    echo '</tr>';
-    echo '<tr>';
-    echo '<th>パスワード</th><td><input type="password" name="pass"></td>';
-    echo '</tr>';
-    echo '</table>';
-    echo '</div>';
-    echo '<div id="button">';
-    echo '<input type="submit" value="登録" name="send">';
-    echo '</div>';
-    echo '</form>';
+}else if(isset($_POST['return'])){
+    header('Location: login-1.php');
 }
-/*if($error['mail'] == 'blank'){
-    echo '※メールアドレスを入力してください。';
-}*/
-/*if($errir['pass'] == 'blank'){
-            echo '※パスワードを入力してください。';
-        }else if($error['pass'] == 'length'){
-            echo '※パスワードは６文字以上に設定してください。';
-        }*/
+require 'header.php';
+echo '<h1>新規ユーザー登録</h1>';
+echo '<div class="box">';
+echo '<table>';
+echo '<form action="sign-up-1.php" method="post">';
+echo '<tr>';
+echo '<th>メールアドレス</th><td><input type="text" name="mail" value="',$mail,'"></td>';
+echo '</tr>';
+echo '<tr>';
+echo '<th>パスワード</th><td><input type="password" name="pass" value="',$pass,'"></td>';
+echo '</tr>';
+echo '</table>';
+echo '</div>';
+echo '<p class="error">', $emasagge, '</p>';
+echo '<div id="button">';
+echo '<input type="submit" value="登録" name="send">';
+echo '<input type="submit" value="戻る" name="return">';
+echo '</div>';
+echo '</form>';
 ?>
 <?php require 'footer.php'; ?>

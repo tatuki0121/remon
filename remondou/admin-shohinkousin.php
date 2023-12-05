@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php $css = 'admin-shohinitiran.css'; ?>
+<?php $css = 'admin-shohinkousin.css'; ?>
 <?php require 'admin-header.php'; ?>
 
 <?php
@@ -11,21 +11,21 @@ $sql = $pdo->prepare('select * from shohin where shohin_id = ?');
 $sql->execute([$shohin_id]);
 $row = $sql->fetch();
 ?>
-<h2>商品更新</h2>
+<div class="h1">商品更新</div>
 <hr>
 <div class="center">
     <form action="admin-update-output.php" method="post" onsubmit="return validateForm()">
         <input type="hidden" name="shohin_id" value="<?= $shohin_id ?>">
         <p>商品名：<input type="text" name="name" value="<?= $row['name'] ?>" required></p>
-        <div class="select-container"> <!-- 新しく追加したdiv -->
+        <div class="select-container">
             内容量：
             <select name="capa" id="capa" required>
                 <option value="300">300</option>
                 <option value="350">350</option>
                 <option value="500">500</option>
             </select>
-
         </div>
+
         <div class="select-container"> <!-- 新しく追加したdiv -->
             度数：
             <select name="dosu" id="dosu" required>
