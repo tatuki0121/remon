@@ -21,7 +21,7 @@ $pdo = new PDO($connect, USER, PASS);
    
    
     if ($row_count > 0) {
-        echo "すでに購入している人がいるので削除できません。";
+        echo "<p>すでに購入している人がいるので削除できません。</p>";
     } else {
            
         $delete_query = "DELETE FROM shohin WHERE shohin_id = :shohin_id";
@@ -29,7 +29,7 @@ $pdo = new PDO($connect, USER, PASS);
         $delete_statement->bindParam(':shohin_id', $shohin_id, PDO::PARAM_INT);
         $delete_statement->execute();
 
-        echo "商品が削除されました。";
+        echo "<p>商品が削除されました。</p>";
     }
      
     
@@ -40,7 +40,7 @@ $pdo = new PDO($connect, USER, PASS);
 
 
 
-
+<link rel="stylesheet" href="css/admin-shohindeletekanyo.css">
 <form action="admin-shohinitiran.php" method="post">
-    <input type="submit" name="top" value="商品一覧に戻る">
+    <p><input type="submit" name="top" value="商品一覧に戻る"></p>
 </form>
