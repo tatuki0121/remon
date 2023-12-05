@@ -5,6 +5,7 @@ $emasagge='';
 if(!isset($_SESSION['user'])){
     echo 'ログインしていません。ログインしてください';
 }else{
+    $check;
     $id=$_SESSION['user']['user_id'];
     $mail=$_SESSION['user']['mail'];
     $pass=$_SESSION['user']['pass'];
@@ -17,12 +18,20 @@ if(!isset($_SESSION['user'])){
 
         $data1 = $sql1->fetchAll();
 
+        $check;
+        //メールアドレスの形式確認
+        if (preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/", $_POST['mail'])) {
+            $check=true;
+        } else {
+            $check=false;
+        }
+
         foreach($data1 as $row){
             $id = $row['user_id'];
             $mail = $row['mail'];
             $pass = $row['pass'];
         }
-        if($_POST['mail'] != '' && strlen($_POST['pass']) > 5){
+        if($check === true && strlen($_POST['pass']) > 5){
             if(empty($data1) || ($mail == $_SESSION['user']['mail'] && 
                 password_verify($_POST['pass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT)) == false)){
                     // 存在しない場合、セッションに再登録して確認画面へ遷移 header(location)
@@ -32,16 +41,17 @@ if(!isset($_SESSION['user'])){
                 header('Location: user-update-d.php');
                 exit();
             }else{
+                $_POST['mail'];
                 $ifdata = password_verify($_POST['pass'],password_hash($_SESSION['user']['pass'],PASSWORD_DEFAULT));
                 if($mail == $_SESSION['user']['mail'] &&  $ifdata == true){
                     //ユーザー情報が更新されていなかった場合
-                    $emasagge = 'パスワードを変更してください。';
+                    $emasagge = '情報を変更してください。';
                     $pass = $_POST['pass'];
                 }else if(!empty($data1) && $id != $_SESSION['user']['user_id']){
                     //メールアドレスが既に使用されていた場合
                     $emasagge = '入力されたメールアドレスは既に使用されています。';
                     $pass = $_POST['pass'];
-                }
+                }    
             }
         }else{
             //エラー項目の確認
@@ -54,6 +64,9 @@ if(!isset($_SESSION['user'])){
             }else if(strlen($_POST['pass']) < 6 && isset($_POST['mail'])){
                 //パスワードが6文字未満の場合
                 $emasagge = 'パスワードは６文字以上に設定してください。';
+            }else if($check === false){
+                //正しいメールアドレスの形式ではない場合
+                $emasagge = 'メールアドレスは正しい形式で入力してください。';
             }
             $mail=$_POST['mail'];
             $pass=$_POST['pass'];
