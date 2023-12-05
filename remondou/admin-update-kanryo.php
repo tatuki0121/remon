@@ -20,7 +20,8 @@ $stmt = $pdo->prepare('update shohin set name=?, exp = ?, volume = ?, alcohol = 
 $stmt->execute([$name, $exp, $capa, $dosu, $price, $suryo, $img, $shohin_id]);
 ?>
 
-<h1>商品更新</h1>
+
+<div class="h1">商品更新</div>
 <hr>
 
 <?php
