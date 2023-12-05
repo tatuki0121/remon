@@ -14,17 +14,26 @@
     <title>檸檬堂販売サイト</title>
 
     <style>
-        .tabs a {
-            color: white;
-        }
+    .tabs a {
+        color: white;
+        transition: color 0.3s;
+        /* カラー変化をアニメーション化 */
+    }
+
+    .tabs a:hover {
+        color: rgba(255, 255, 255, 0.7);
+        /* 薄く白くする色を指定 */
+    }
     </style>
+
 </head>
 
 <body>
     <div id="app" class="has-background-black">
         <div class="tabs is-right">
             <ul>
-                <li v-for="(item, i) in menus" :key="i" class="" class="menu-item"><a :href="item.path"><i :class="item.icon"></i>{{ item.label }}</a></li>
+                <li v-for="(item, i) in menus" :key="i" class="" class="menu-item"><a :href="item.path"><i
+                            :class="item.icon"></i>{{ item.label }}</a></li>
             </ul>
         </div>
     </div>
