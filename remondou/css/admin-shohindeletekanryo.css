@@ -1,0 +1,22 @@
+p{
+    text-align: center;
+    margin-top: 75px;
+    font-size: 25px;
+}
+.h1 {
+    color: #000;
+    font-size: 2.2em;
+  }
+#button input{
+    text-align: center;
+    margin-top: 50px;
+}
+
+input[type="submit"] {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
