@@ -3,7 +3,7 @@
 <?php $css = 'admin_toroku_output.css' ?>
 <?php require 'admin-header.php'; ?>
 
-<div class="h2">商品登録</div>
+<div class="h1">商品登録</div>
 <hr>
 <table>
     <tr>

@@ -19,6 +19,7 @@
 
 .center form input[type="submit"],
 .center form input[type="button"] {
+  margin-top: 20px;
   background-color: #000500;
   color: white;
   padding: 10px 50px;
