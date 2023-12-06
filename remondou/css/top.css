@@ -37,7 +37,7 @@ img {
   width: 430px;
 }
 .custom-image img {
-  height: 500px;
+  height: 450px;
   width: 450px;
 }
 
@@ -45,6 +45,8 @@ img {
   height: 350px;
   width: 300px;
   margin-bottom: 30px;
+  border-radius: 20%; /* 画像の枠を丸くする */
+  overflow: hidden; /* 丸い形を適用するために必要 */
 }
 .page-top {
   display: none; /* 非表示 */
