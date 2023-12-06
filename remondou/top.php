@@ -36,13 +36,11 @@
     <div class="exp">これが、イマドキのレモンサワー。</div>
     <div class="exp">お家で楽しめる、こだわりのおいしさ。</div>
     <p class="custom-image"><img src="image/ninki.jpeg" width="350" height="250" alt=""></p>
-    <div class="exp">～画像説明～</div>
-    <p>
-    <h2>ムービー</h2>
-    </p>
-    <div style="text-align: center;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1IeAtQiSPMc?si=da3KJ3R9CwDtjT7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <div class="page-top">
+        ページトップへ戻る
     </div>
+    <script src="script/top.js"></script>
     <?php require 'footer.php'; ?>
 </body>
 

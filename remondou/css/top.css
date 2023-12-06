@@ -33,7 +33,7 @@ h2 {
   margin-top: 5px;
 }
 img {
-  height: 505px;
+  height: 515px;
   width: 430px;
 }
 .custom-image img {
@@ -45,4 +45,24 @@ img {
   height: 350px;
   width: 300px;
   margin-bottom: 30px;
+}
+.page-top {
+  display: none; /* 非表示 */
+  position: fixed; /* ページ右下に固定 */
+  right: 20px;
+  bottom: 20px;
+  padding: 20px 10px;
+  border-radius: 8px;
+  background-color: red;
+  color: #fff;
+  cursor: pointer; /* カーソルをポインターに */
+}
+/* activeクラスが付与されたとき */
+.page-top.active {
+  display: block;
+}
+/* ホバーしたとき */
+.page-top:hover {
+  opacity: 0.8;
+  transition: 0.3s;
 }
