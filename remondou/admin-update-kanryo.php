@@ -1,8 +1,8 @@
+<?php session_start();?>
+<?php require 'db-connect.php';?>
+<?php $css = 'admin-update-kanryo.css'; ?>
+<?php require 'admin-header.php';?>
 <?php
-session_start();
-require 'db-connect.php';
-require 'admin-header.php';
-
 $name = $_SESSION['shohin']['name'];
 $capa = $_SESSION['shohin']['capa'];
 $dosu = $_SESSION['shohin']['dosu'];
@@ -33,7 +33,6 @@ if ($stmt->rowCount() > 0) {
 }
 unset($_SESSION['shohin']);
 ?>
-<link rel="stylesheet" href="css/admin-update-kanryo.css">
 <form action="admin-shohinitiran.php" method="post">
     <p><input type="submit" name="admin-shohinitiran.php" value="商品一覧に戻る"></p>
 </form>

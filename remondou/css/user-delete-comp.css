@@ -1,0 +1,24 @@
+/* user-delete-comp.css */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.centered-message {
+    text-align: center;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+form {
+    margin: 0 10px;
+}

@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<?php $css = 'kounyu-kanryo.css'; ?>
 <?php require 'nav.php'; ?>
 <?php
 $pdo = new PDO($connect, USER, PASS);

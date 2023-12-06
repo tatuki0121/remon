@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
+<?php $css = 'user-delete-comp.css'; ?>
 <?php
 if (isset($_SESSION['admin']) ) {
     $user_id=$_SESSION['u_delete']['user_id'];
