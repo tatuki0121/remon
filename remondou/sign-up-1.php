@@ -67,8 +67,8 @@ echo '</table>';
 echo '</div>';
 echo '<p class="error">', $emasagge, '</p>';
 echo '<div id="button">';
-echo '<input type="submit" value="登録" name="send">';
 echo '<input type="submit" value="戻る" name="return">';
+echo '<input type="submit" value="登録" name="send">';
 echo '</div>';
 echo '</form>';
 ?>
