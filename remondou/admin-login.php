@@ -35,38 +35,23 @@ if(isset($_POST['but'])){
             }
         }
     }
-    require 'admin-login-header.php';
-    echo '<h1>ログイン</h1>';
-    echo '<div class="box">';
-    echo '<table>';
-    echo '<form action="admin-login.php" method="post">';
-    echo '<tr>';
-    echo '<th>メールアドレス</th>　<td><input type="text" name="mail"></td>';
-    echo '</tr>';
-    echo '<tr>';
-    echo '<th>パスワード</th>　<td><input type="password" name="pass"></td>';
-    echo '</tr>';
-    echo '</table>';
-    echo '</div>';
-    echo '<p class="error">',$emassage, '</p>';
-    echo '<p><input type="submit" name="but" value="ログイン"></p>';
-    echo '</form>';
-}else{
-    require 'admin-login-header.php';
-    echo '<h1>ログイン</h1>';
-    echo '<div class="box">';
-    echo '<table>';
-    echo '<form action="admin-login.php" method="post">';
-    echo '<tr>';
-    echo '<th>メールアドレス</th>　<td><input type="text" name="mail"></td>';
-    echo '</tr>';
-    echo '<tr>';
-    echo '<th>パスワード</th>　<td><input type="password" name="pass"></td>';
-    echo '</tr>';
-    echo '</table>';
-    echo '</div>';
-    echo '<p><input type="submit" name="but" value="ログイン"></p>';
-    echo '</form>';
 }
+require 'admin-login-header.php';
+echo '<h1>ログイン</h1>';
+echo '<div class="box">';
+echo '<table>';
+echo '<form action="admin-login.php" method="post">';
+echo '<tr>';
+echo '<th>メールアドレス</th>　<td><input type="text" name="mail"></td>';
+echo '</tr>';
+echo '<tr>';
+echo '<th>パスワード</th>　<td><input type="password" name="pass"></td>';
+echo '</tr>';
+echo '</table>';
+echo '</div>';
+echo '<p class="error">',$emassage, '</p>';
+echo '<p><input type="submit" name="but" value="ログイン"></p>';
+echo '</form>';
+
 ?>
 <?php require 'footer.php'; ?>

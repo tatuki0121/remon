@@ -29,11 +29,11 @@ if(isset($_POST['send'])){
     echo '</table>';
     echo '</div>';
     echo '<div class="columns is-mobile is-centered">';
-    echo '<p class="mt-3">上記情報を登録してよろしいですか？</p>';
+    echo '<p class="mt-5">上記情報を登録してよろしいですか？</p>';
     echo '</div>';
     echo '<div id="button">';
-    echo '<input type="submit" value="戻る" name="return">';
-    echo '<input class="ml-6 mt-3" type="submit" value="登録" name="send">';
+    echo '<input class="mr-6 mt-4" type="submit" value="登録" name="send">';
+    echo '<input type="submit" class="ml-6" value="戻る" name="return">';
     echo '</div>';
     echo '</form>';
 }
