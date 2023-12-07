@@ -1,13 +1,15 @@
-#syosai p{
-    margin: 30px;
+#shohin {
     text-align: center;
+    padding-top: 30px;
 }
-body{
+#button{
+    display: flex;
     text-align: center;
-
+    margin: 20px auto;
+    width: 380px;
 }
 #button input{
-    margin: 50px;
+    margin: 20px;
 }
 
 input[type="submit"] {
@@ -19,8 +21,4 @@ input[type="submit"] {
     cursor: pointer;
     margin: 10px;
     
-}
-
-.base {
-    padding-top: 80px;
 }
