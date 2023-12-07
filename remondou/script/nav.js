@@ -8,6 +8,15 @@ new Vue({
                     highlighted: 'highlighted'
                 },
                 {
+                    label: '     '
+                },
+                {
+                    label: '     '
+                },
+                {
+                    label: '     '
+                },
+                {
                     label: 'トップ',
                     path: './top.php'
                 },
