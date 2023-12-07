@@ -1,0 +1,17 @@
+input[type="submit"] {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+#button {
+    display: flex;
+    text-align: center;
+    margin: 20px auto;
+    width:  380px;
+}
+#button input {
+    margin: 20px;
+}
