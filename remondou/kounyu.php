@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php $css = 'kounyu.css'; ?>
 <?php
 $id = $_GET['id'];
 /*
