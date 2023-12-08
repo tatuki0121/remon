@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
 <?php $css = 'user-delete-comp.css'; ?>
-<?php require 'admin-header.php'; ?>
 
 <?php
 if (isset($_SESSION['admin']) ) {
@@ -25,16 +24,18 @@ if (isset($_SESSION['admin']) ) {
     $sql = $pdo->prepare('delete from user where user_id=?');
     $sql->execute([$user_id]);
 
-    
+    require 'admin-header.php';
     echo '<body>';
     echo '<h1>ユーザー一覧</h1>';
     echo '<hr>';
     echo '<p>ユーザー削除完了しました</p>';
     echo '<form action="admin-user-delete.php">';
+    echo '<div id="button">';
     echo '<input type="submit" value="ユーザー一覧に戻る">';
     echo '</form>';
     echo '<form action="admin-top.php">';
     echo '<input type="submit" value="管理者トップに戻る">';
+    echo '</div>';
     echo '</form>';
     echo '</body>';
     echo '</html>';
