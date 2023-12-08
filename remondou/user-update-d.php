@@ -32,8 +32,8 @@ if(isset($_POST['send'])){
     echo '<p class="mt-5">上記情報を登録してよろしいですか？</p>';
     echo '</div>';
     echo '<div id="button">';
-    echo '<input class="mr-6 mt-4" type="submit" value="登録" name="send">';
     echo '<input type="submit" class="ml-6" value="戻る" name="return">';
+    echo '<input class="mr-6 mt-4" type="submit" value="登録" name="send">';
     echo '</div>';
     echo '</form>';
 }
