@@ -17,11 +17,11 @@
         <div class="select-container"> <!-- 新しく追加したdiv -->
             度数：
             <select name="dosu" id="dosu" required>
-                <option value="1">3</option>
-                <option value="2">5</option>
-                <option value="3">7</option>
-                <option value="4">9</option>
-                <option value="5">25</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+                <option value="9">9</option>
+                <option value="25">25</option>
             </select>
             %
         </div>
