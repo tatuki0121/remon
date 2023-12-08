@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    font-size: 18px;
+    font-size: 20px;
     /* 文字を大きく */
 }
 
@@ -50,10 +50,12 @@ form {
 }
 
 p {
+    margin-top: 60px;
     text-align: center;
     /* 中央に配置 */
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* 下の余白を追加 */
+    
 }
 
 input[type="submit"] {
@@ -61,15 +63,24 @@ input[type="submit"] {
     color: #fff;
     padding: 10px 50px;
     /* ボタンサイズを大きく */
-    font-size: 18px;
+    font-size: 20px;
     /* 文字を大きく */
     border: none;
     cursor: pointer;
     display: inline-block;
-    margin-right: 30px;
+    margin-right:-50px;
     /* ボタン間のスペースを広げる */
+    margin-bottom: 10px;
 }
 
 input[type="submit"]:hover {
     background-color: #333;
 }
+
+form {
+    display: inline-block;
+    margin-left: 100px; /* 必要に応じてマージンを調整してください */
+    
+}
+
+
