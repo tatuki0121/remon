@@ -1,14 +1,15 @@
 <?php session_start(); ?>
 <?php require 'db-connect.php'; ?>
-<?php $css = 'shohindeletekanryo.css'; ?>
+<?php $css = 'admin-shohindeletekanryo.css'; ?>
 <?php require 'admin-header.php'; ?>
 
 
-<h1>商品削除</h1>
+<div class = h1>商品削除</div>
 <hr>
 
 <?php
 $pdo = new PDO($connect, USER, PASS);
+
 
 
 
@@ -41,7 +42,7 @@ $pdo = new PDO($connect, USER, PASS);
 
 
 
-<link rel="stylesheet" href="css/admin-shohindeletekanyo.css">
+<link rel="stylesheet" href="css/admin-shohindeletekanryo.css">
 <form action="admin-shohinitiran.php" method="post">
     <p><input type="submit" name="top" value="商品一覧に戻る"></p>
 </form>

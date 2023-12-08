@@ -10,10 +10,10 @@
         <th>商品名</th>
         <th>内容量</th>
         <th>度数</th>
-        <th>商品説明</th>
         <th>価格</th>
         <th>在庫数量</th>
         <th>商品画像</th>
+        <th>商品説明</th>
     </tr>
     <?php
     echo '<tr>';
