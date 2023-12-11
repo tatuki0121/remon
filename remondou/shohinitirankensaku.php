@@ -34,14 +34,50 @@
         $sql = $pdo->query('SELECT * FROM shohin');
     }
 
+$cnt = 0;
     foreach ($sql as $row) {
-        echo '<div class="itiran">';
-        //echo '<td>', '<img src="image/',$row['image'],'"weight="100" height="100"></td>';
-        echo '<img src="image/', $row['image'], '" width="100" height="100">';
-        echo '<a href=shohinsyosai.php?id=',$row['shohin_id'],'>', $row['name'],'</a>';
+        if( $cnt % 4 == 0 ){
+            echo '<div class="columns is-desktop">';
+        }
+    
+        /*
+        echo '<div class="card m-5 p-5">';
+            echo '<div class="card-header">';
+            echo '<div class="card-footer-item">';
+            echo '<img src="image/', $row['image'], '" width="100" height="100"><br>';
+            echo '<a href=shohinsyosai.php?id=',$row['shohin_id'],'>', $row['name'],'</a>';
+            echo '</div>';
+            echo '</div>';
         echo '</div>';
-    }
+        */
 
-  
+echo '
+<div class="column">
+        <div class="card">
+  <header class="card-header">
+    <p class="card-header-title">'
+    ,$row['name'],
+    '</p>
+  </header>
+  <div class="card-image">
+    <figure class="image">
+      <img src="image/', $row['image'], '" alt="イメージ">
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="content">
+      <strong><a href=shohinsyosai.php?id=',$row['shohin_id'],'>', $row['name'],'はこちら！！</a></strong>
+      <br><br>
+      ', $row['exp'],'
+    </div>
+  </div>
+  </div>
+</div>';
+$cnt++;
+if( $cnt % 4 == 0 ){
+    echo '</div>';
+}
+
+    }
 ?>
 <?php require 'footer.php';?>
