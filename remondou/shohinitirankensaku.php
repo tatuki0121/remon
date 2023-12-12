@@ -3,18 +3,27 @@
 <?php require 'nav.php'; ?>
 <?php
     echo '<form action="shohinitirankensaku.php" method="post">';
-    echo '<div id="kensaku">'; 
-    echo '<input type="text" name="keyword">';
-      
-    $alcoholoption=array(3,5,7,9,25);
-    echo '<select name="selected_alcohol">';
-    echo '<option value="">度数</option>';
-    foreach ($alcoholoption as $value) {
-    echo '<option value="', $value, '">',  $value, '</option>';
-    }
-    echo '</select>';
-    echo '<input type="submit" value="🔍">';
-    echo '</div>';
+    echo '<div class="columns is-centered mt-5 mb-4">';
+        //echo '<div id="kensaku">';
+            echo '<div class="column is-half">';
+            echo '<input type="text" class="input" name="keyword">';
+            echo '</div>';
+
+            echo '<div class="column mr-3 is-one-quarter">';
+            $alcoholoption=array(3,5,7,9,25);
+            echo '<select name="selected_alcohol" class="mr-3">';
+            echo '<option value="">度数</option>'; 
+            foreach ($alcoholoption as $value) {
+                echo '<option value="', $value, '">',  $value, '</option>';
+            }
+            echo '</select>';
+            //echo '</div>';
+
+            //echo '<div class="column">';
+            echo '<input type="submit" value="🔍">';
+            echo '</div>';
+        //echo '</div>';
+        echo '</div>';
     echo '</form>';
     $pdo = new PDO($connect, USER, PASS);
     if(isset($_POST['keyword'])){
