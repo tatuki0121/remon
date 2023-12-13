@@ -5,6 +5,7 @@
     $pdo=new PDO($connect, USER, PASS);
     $sql=$pdo->prepare('select * from shohin where shohin_id=?');
     $sql->execute([$id]);
+    if(!empty($_POST['stock'])){
     foreach($sql as $row){
         echo '<div id="shohin">';
         echo '<p>', '<img src="image/', $row['image'], '"width="100" height="100"></p>';
@@ -23,6 +24,18 @@
         echo '<input type="submit" value="商品一覧検索画面に戻る">';
         echo '</form>';
         echo '</div>';
+    }
+    }else if(empty($_POST['stock'])){
+        echo '<p id="margin">申し訳ございません</p>';
+        echo '<p>商品の在庫がなくなってしまいました。購入することはできません。</p>';
+        echo '<p>入荷をお待ちください。</p>';
+        echo '<div id="button">';
+        echo '<form action = "shohinitirankensaku.php">';
+        echo '<input type = "submit" value = "商品一覧に戻る">';
+        echo '</form>';
+        echo '<form action = "top.php">';
+        echo '<input type = "submit" value = " トップ画面に戻る">';
+        echo '</form>';
     }
 ?>
 <?php require 'footer.php'; ?>

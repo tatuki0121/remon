@@ -22,3 +22,10 @@ input[type="submit"] {
     margin: 10px;
     
 }
+p{
+    text-align: center;
+    font-size: x-large;
+}
+#margin {
+    margin-top: 50px;
+}
