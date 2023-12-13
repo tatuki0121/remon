@@ -67,8 +67,8 @@ foreach($_SESSION['item'] as $id => $item){
             $sql->bindValue(2, intval($_POST['shohin_id']), PDO::PARAM_INT);
             $sql->execute();
             $shohin_id = $row['shohin_id'];
-            $number = $item['stock'];
-            $price = $row['price'] * $item['stock'];
+            $number = $row['stock'];
+            $price = $row['price'] * $row['stock'];
             
             //購入詳細テーブルに購入IDと商品ID、数量、金額を追加
             $sql3 = $pdo->prepare("INSERT INTO purchase_detail (purchase_id, shohin_id, number, price) VALUES (?, ?, ?, ?)");
