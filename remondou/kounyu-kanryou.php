@@ -50,7 +50,7 @@ foreach($_SESSION['item'] as $id => $item){
             unset($_SESSION['item'][$shohin_id]);
             $shohin[]=$row['name'];
         }else{
-            echo '<P>申し訳ございません。<br>「',$row['name'],'」商品の在庫が無くなってしまいました。購入することはできません。<br>入荷をお待ちください!!!</p>';
+            echo '<P>申し訳ございません。<br>「',$row['name'],'」の在庫が無くなってしまいました。購入することはできません。<br>入荷をお待ちください!!!</p>';
         }
     }
 }
@@ -83,7 +83,7 @@ if(count($shohin)>0){
     echo ' <p>購入完了しました。ありがとうございます！</br>';
     echo 'お買い上げ商品は、下記となります</p>';
     foreach($shohin as $value){
-        echo '<p>', 「$value」, '</p>';
+        echo '<p>', $value, '</p>';
     }
 }
 echo '<form action="top.php" method="POST">';
