@@ -1,22 +1,36 @@
 <?php $css ='cart-in.css'; ?>
 <?php require 'nav.php'; ?>
 <?php
-if(!isset($_SESSION['item'])){
-    $_SESSION['item']=[];
+if(!empty($_POST['stock'])){
+    if(!isset($_SESSION['item'])){
+        $_SESSION['item']=[];
+    }
+    $count=0;
+    if(isset($_SESSION['item'][$id])){
+        $count=$_SESSION['item'][$id]['stock'];
+    }
+   
+    $_SESSION['item'][$id]=[
+        'shohin_id'=>$id,'stock'=>$count+$_POST['stock']
+    ];
+    echo '<p>カートに商品を追加しました</p>';
+    echo '<form action="top.php" method="post">';
+    echo '<div id="button">';
+    echo '<p><input type="submit" value="トップ画面へ"></p>';
+    echo '</div>';
+    echo '</form>';
+}else{
+    echo '<p>申し訳ございません。<br>';
+    echo '商品の在庫がなくなってしまいました。購入することはできません。<br>';
+    echo '入荷をお待ちください。</p>';
+    echo '<div id="button">';
+    echo '<form action = "shohinitirankensaku.php">';
+    echo '<input type = "submit" value = "商品一覧に戻る">';
+    echo '</form>';
+    echo '<form action = "top.php">';
+    echo '<input type = "submit" value = " トップ画面に戻る">';
+    echo '</form>';
+    echo '</div>';
 }
-$count=0;
-if(isset($_SESSION['item'][$id])){
-    $count=$_SESSION['item'][$id]['stock'];
-}
-
-$_SESSION['item'][$id]=[
-    'shohin_id'=>$id,'stock'=>$count+$_POST['stock']
-];
-echo '<p>カートに商品を追加しました</p>';
-echo '<form action="top.php" method="post">';
-echo '<div id="button">';
-echo '<p><input type="submit" value="トップ画面へ"></p>';
-echo '</div>';
-echo '</form>';
 ?>
 <?php require 'footer.php'; ?>

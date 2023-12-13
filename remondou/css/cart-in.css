@@ -2,11 +2,6 @@ p{
     text-align: center;
     margin-top: 75px;
 }
-#button input{
-    text-align: center;
-    margin-top: 50px;
-}
-
 input[type="submit"] {
     background-color: #111;
     color: #fff;
@@ -14,4 +9,12 @@ input[type="submit"] {
     font-size: 16px;
     border: none;
     cursor: pointer;
+}
+#button {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+#button input {
+    margin: 50px;
 }
