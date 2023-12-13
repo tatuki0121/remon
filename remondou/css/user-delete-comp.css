@@ -1,4 +1,4 @@
-body {
+html {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -17,32 +17,8 @@ hr {
     margin-top: 10px;
     margin-bottom: 20px;
 }
-table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #333;
-    /* 枠線を太く */
-}
-th,
-td {
-    border: 2px solid #333;
-    /* 枠線を太く */
-    padding: 15px;
-    /* パディングを大きく */
-    text-align: left;
-}
-th {
-    background-color: #f8f8f8;
-}
-form {
-    margin-top: 20px;
-    text-align: center;
-}
 p {
-    margin-top: 60px;
+    margin-top: 70px;
     text-align: center;
     /* 中央に配置 */
     margin-bottom: 40px;
@@ -50,24 +26,18 @@ p {
     font-size: 20px;
 }
 input[type="submit"] {
-    background-color: #000;
+    background-color: #111;
     color: #fff;
-    padding: 10px 50px;
-    /* ボタンサイズを大きく */
-    font-size: 20px;
-    /* 文字を大きく */
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
-    display: inline-block;
-    margin-right: -285px;
-    /* ボタン間のスペースを広げる */
-    margin-bottom: 10px;
-    
 }
-input[type="submit"]:hover {
-    background-color: #333;
+#button {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
 }
-form {
-    display: inline-block;
-    margin-left: 400px; /* 必要に応じてマージンを調整してください */
+#button input {
+    margin: 50px;
 }
