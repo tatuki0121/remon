@@ -1,5 +1,8 @@
 p{
     text-align: center;
+    font-size: x-large;
+}
+#margin {
     margin-top: 75px;
 }
 input[type="submit"] {
