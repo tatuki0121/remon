@@ -32,8 +32,7 @@ foreach($_SESSION['item'] as $id => $item){
 
     foreach ($rows as $row) {
         $stock = $row['stock'] - $item['stock'];
-
-        if ($stock > 0) {
+        if ($stock > 0 || $stock == 0) {
 
             $updateSql = 'update shohin set stock = ? where shohin_id = ?';
             $sql2 = $pdo->prepare($updateSql);
@@ -50,7 +49,7 @@ foreach($_SESSION['item'] as $id => $item){
             unset($_SESSION['item'][$shohin_id]);
             $shohin[]=$row['name'];
         }else{
-            echo '<P>申し訳ございません。<br>「',$row['name'],'」の在庫が無くなってしまいました。購入することはできません。<br>入荷をお待ちください!!!</p>';
+            echo '<P>申し訳ございません。<br>「',$row['name'],'」の在庫が不足しています。。購入することはできません。<br>入荷をお待ちください!!!</p>';
         }
     }
 }
@@ -60,7 +59,7 @@ foreach($_SESSION['item'] as $id => $item){
     $rows = $sql->fetchAll();
     foreach ($rows as $row) {
         $stock = $row['stock'] - $_POST['stock'];
-        if ($stock > 0) {
+        if ($stock > 0 || $stock == 0) {
             $updateSql = 'update shohin set stock = ? where shohin_id = ?';
             $sql = $pdo->prepare($updateSql);
             $sql->bindValue(1, intval($stock), PDO::PARAM_INT);
@@ -75,7 +74,7 @@ foreach($_SESSION['item'] as $id => $item){
             $sql3->execute([$purchase_id, $shohin_id, $number, $price]);
             $shohin[]=$row['name'];
         }else{
-            echo '<P>申し訳ございません。<br>「',$row['name'],'」の在庫が無くなってしまいました。購入することはできません。<br>入荷をお待ちください!!!</p>';
+            echo '<P>申し訳ございません。<br>「',$row['name'],'」の在庫が不足しています。購入することはできません。<br>入荷をお待ちください!!!</p>';
         }
     }
 }
