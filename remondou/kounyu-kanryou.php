@@ -49,7 +49,7 @@ foreach($_SESSION['item'] as $id => $item){
             unset($_SESSION['item'][$shohin_id]);
             $shohin[]=$row['name'];
         }else{
-            echo '<P>申し訳ございません。<br>「',$row['name'],'」の在庫が不足しています。。購入することはできません。<br>入荷をお待ちください!!!</p>';
+            echo '<P>申し訳ございません。<br>「',$row['name'],'」の在庫が不足しています。購入することはできません。<br>入荷をお待ちください!!!</p>';
         }
     }
 }

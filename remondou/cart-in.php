@@ -21,7 +21,7 @@ if(!empty($_POST['stock'])){
     echo '</form>';
 }else{
     echo '<p id="margin">申し訳ございません</p>';
-    echo '<p>商品の在庫がなく、購入することはできません。</p>';
+    echo '<p>商品の在庫がなく、カートに追加することはできません。</p>';
     echo '<p>入荷をお待ちください。</p>';
     echo '<div id="button">';
     echo '<form action = "shohinitirankensaku.php">';
